@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ई-नंदगांव जन सेवा केंद्र | नंदगांव, बरसाना, गिडोह, बदनगढ़, संकेत, जाव डिजिटल सेवा पोर्टल</title>
-    <meta name="description" content="ई-नंदगांव जन सेवा केंद्र (नंदगांव, बरसाना, गिडोह, बदनगढ़, लोहरवारी, जाव, संकेत, महराना, छाता) - विद्यार्थियों हेतु सभी सरकारी फॉर्म 0% फीस पर, घर बैठे बुजुर्ग पेंशन ई-केवाईसी, EPFO PF निकासी, ड्राइविंग लाइसेंस व प्रमाण पत्र सेवा।">
+    <title>ई-नंदगांव जन सेवा केंद्र | नंदगांव, बरसाना, गिडोह , बदनगढ़, संकेत, जाव डिजिटल सेवा पोर्टल</title>
+    <meta name="description" content="ई-नंदगांव जन सेवा केंद्र (नंदगांव, बरसाना, गिडोह , बदनगढ़, लोहरवारी, जाव, संकेत, महराना, छाता) - विद्यार्थियों हेतु सभी सरकारी फॉर्म 0% फीस पर, घर बैठे बुजुर्ग पेंशन ई-केवाईसी, EPFO PF निकासी, ड्राइविंग लाइसेंस व प्रमाण पत्र सेवा।">
     <meta name="keywords" content="eNandgaon, Jan Seva Kendra Nandgaon, CSC Center Barsana, Cyber Cafe Gidoh, Jan Seva Kendra Badangarh, Loharwari CSC, Jao Mathura Cyber Cafe, Sanket CSC Kendra, Mahrana Jan Seva, Chhata CSC, Pension KYC Nandgaon Barsana, Sarkari Form Free Mathura, Vishnu Kumar Nandgaon">
     <link rel="icon" type="image/png" href="logo.png">
 
@@ -15,7 +15,7 @@
     <meta name="ICBM" content="27.7127, 77.3879">
 
     <!-- Open Graph for WhatsApp & Social Sharing -->
-    <meta property="og:title" content="ई-नंदगांव जन सेवा केंद्र - नंदगांव, बरसाना, गिडोह, बदनगढ़, संकेत, जाव जनहित सेवा पोर्टल">
+    <meta property="og:title" content="ई-नंदगांव जन सेवा केंद्र - नंदगांव, बरसाना, गिडोह , बदनगढ़, संकेत, जाव जनहित सेवा पोर्टल">
     <meta property="og:description" content="विद्यार्थियों के सभी सरकारी फॉर्म 0% फीस पर। घर बैठे बुजुर्ग पेंशन ई-केवाईसी, PF विथड्रॉल व ड्राइविंग लाइसेंस सहायता।">
     <meta property="og:url" content="https://enandgaon.com">
     <meta property="og:type" content="website">
@@ -109,12 +109,22 @@
             background: linear-gradient(90deg, #f97316 0%, #f97316 33.3%, #ffffff 33.3%, #ffffff 66.6%, #15803d 66.6%, #15803d 100%);
         }
 
+        /* Sticky Navigation Bar Container */
+        .sticky-nav-wrapper {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            background: var(--white);
+        }
+
         /* Portal Top Bar */
         .portal-topbar {
             background-color: var(--gov-dark);
             color: #e2e8f0;
-            padding: 8px 5%;
-            font-size: 0.84rem;
+            padding: 6px 5%;
+            font-size: 0.82rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -135,11 +145,10 @@
         /* Header Navigation */
         header.main-header {
             background-color: var(--white);
-            padding: 14px 5%;
+            padding: 12px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
             border-bottom: 2px solid #e2e8f0;
         }
         .brand {
@@ -149,7 +158,7 @@
             text-decoration: none;
         }
         .site-logo {
-            height: 52px;
+            height: 50px;
             width: auto;
             object-fit: contain;
             border-radius: 8px;
@@ -158,6 +167,22 @@
         .site-logo:hover {
             transform: scale(1.05);
         }
+
+        /* Fallback Logo Badge if logo.png is missing */
+        .brand-emblem-badge {
+            min-width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--gov-blue) 0%, #1e3a8a 100%);
+            color: var(--gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            border: 2px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
         .brand-text h1 {
             font-size: 1.45rem;
             font-weight: 800;
@@ -550,6 +575,68 @@
         .srv-btn.btn-saffron { background: var(--saffron); }
         .srv-btn.btn-saffron:hover { background: #ea580c; }
 
+        /* Custom Service & Suggestion Box */
+        .suggestion-box-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+            border: 2px dashed #0284c7;
+            border-radius: 14px;
+            padding: 30px;
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: 1.1fr 1.3fr;
+            gap: 25px;
+            align-items: center;
+        }
+        .suggestion-box-card h3 {
+            font-size: 1.35rem;
+            color: var(--gov-blue);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .suggestion-box-card p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        .sugg-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .sugg-form-grid input, .sugg-form-grid textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #94a3b8;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            background: #ffffff;
+            outline: none;
+        }
+        .sugg-form-grid textarea {
+            grid-column: span 2;
+            resize: vertical;
+            height: 70px;
+        }
+        .btn-send-sugg {
+            grid-column: span 2;
+            background: #0284c7;
+            color: var(--white);
+            border: none;
+            padding: 11px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+        .btn-send-sugg:hover {
+            background: #0369a1;
+        }
+
         /* Process Steps */
         .process-flow {
             background: var(--white);
@@ -741,9 +828,11 @@
 
         /* Mobile Adjustments */
         @media (max-width: 900px) {
-            .hero-wrapper, .operator-section, .process-grid, .footer-cols {
+            .hero-wrapper, .operator-section, .process-grid, .footer-cols, .suggestion-box-card {
                 grid-template-columns: 1fr;
             }
+            .sugg-form-grid { grid-template-columns: 1fr; }
+            .sugg-form-grid textarea, .btn-send-sugg { grid-column: span 1; }
             .hero-left h2 { font-size: 1.85rem; }
             .transparency-section { margin-top: 20px; }
             .compare-grid { grid-template-columns: 1.2fr 1fr 1fr; font-size: 0.82rem; }
@@ -758,39 +847,50 @@
     <!-- Tricolor Top Strip -->
     <div class="tricolor-strip"></div>
 
-    <!-- Citizen Alert Topbar -->
-    <div class="portal-topbar">
-        <div class="location">
-            <i class="fa-solid fa-location-dot" style="color: var(--saffron);"></i>
-            <span>नंदगांव, बरसाना, गिडोह, बदनगढ़, संकेत, जाव, महराना, छाता (मथुरा)</span>
-        </div>
-        <div class="contact-quick">
-            <span>हेल्पलाइन:</span>
-            <a href="tel:7988807962"><i class="fa-solid fa-phone"></i> +91 7988807962</a>
-        </div>
-    </div>
-
-    <!-- Main Header -->
-    <header class="main-header">
-        <a href="https://enandgaon.com" class="brand">
-            <img src="logo.png" alt="eNandgaon Logo" class="site-logo">
-            <div class="brand-text">
-                <h1>ई-नंदगांव जन सेवा केंद्र</h1>
-                <p>जनहित ग्रामीण डिजिटल सहायता केंद्र (नंदगांव • बरसाना • गिडोह • बदनगढ़ • जाव • संकेत)</p>
+    <!-- Sticky Navigation Wrapper (Scroll hone par top par fix rahega) -->
+    <div class="sticky-nav-wrapper">
+        
+        <!-- Citizen Alert Topbar -->
+        <div class="portal-topbar">
+            <div class="location">
+                <i class="fa-solid fa-location-dot" style="color: var(--saffron);"></i>
+                <span>नंदगांव, बरसाना, गिडोह , बदनगढ़, संकेत, जाव, महराना, छाता (मथुरा)</span>
             </div>
-        </a>
-        <div class="header-cta">
-            <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सहायता%20चाहिए।" class="btn-call">
-                <i class="fa-brands fa-whatsapp"></i> व्हाट्सएप सहायता
-            </a>
+            <div class="contact-quick">
+                <span>हेल्पलाइन:</span>
+                <a href="tel:7988807962"><i class="fa-solid fa-phone"></i> +91 7988807962</a>
+            </div>
         </div>
-    </header>
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <a href="https://enandgaon.com" class="brand">
+                <!-- Image Logo with Instant Fallback -->
+                <img src="logo.png" alt="eNandgaon Logo" class="site-logo" onerror="this.style.display='none'; document.getElementById('logo-fallback-badge').style.display='flex';">
+                
+                <div id="logo-fallback-badge" class="brand-emblem-badge" style="display: none;">
+                    <i class="fa-solid fa-landmark"></i>
+                </div>
+
+                <div class="brand-text">
+                    <h1>ई-नंदगांव जन सेवा केंद्र</h1>
+                    <p>जनहित ग्रामीण डिजिटल सहायता केंद्र (नंदगांव • बरसाना • गिडोह  • बदनगढ़ • जाव • संकेत)</p>
+                </div>
+            </a>
+            <div class="header-cta">
+                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सहायता%20चाहिए।" class="btn-call">
+                    <i class="fa-brands fa-whatsapp"></i> व्हाट्सएप सहायता
+                </a>
+            </div>
+        </header>
+
+    </div>
 
     <!-- Notice Ticker (Dynamic from Google Sheet) -->
     <div class="notice-ticker">
         <span class="ticker-badge">सूचना पट</span>
         <marquee id="live-notice-marquee" behavior="scroll" direction="left" scrollamount="6">
-            📢 UP पुलिस, SSC, रेलवे व रोजगार मेला आवेदन चालू हैं। नंदगांव, बरसाना, गिडोह, बदनगढ़, लोहरवारी, जाव, संकेत व महराना क्षेत्र में बुजुर्ग पेंशन वार्षिक ई-केवाईसी हेतु घर बैठे सेवा उपलब्ध है।
+            📢 UP पुलिस, SSC, रेलवे व रोजगार मेला आवेदन चालू हैं। नंदगांव, बरसाना, गिडोह , बदनगढ़, लोहरवारी, जाव, संकेत व महराना क्षेत्र में बुजुर्ग पेंशन वार्षिक ई-केवाईसी हेतु घर बैठे सेवा उपलब्ध है।
         </marquee>
     </div>
 
@@ -806,7 +906,7 @@
                 </div>
                 <h2>नंदगांव, बरसाना व आसपास के गांवों का <span>ऑनलाइन जन सेवा केंद्र</span></h2>
                 <p class="subheading">
-                    गिडोह, बदनगढ़, लोहरवारी, जाव, संकेत, महराना के छात्रों को सरकारी फॉर्म भरने के लिए दूर जाने या कैफे पर अतिरिक्त पैसे देने की आवश्यकता नहीं है। हमारा सर्विस चार्ज = ₹0। बुजुर्गों हेतु घर बैठे पेंशन ई-केवाईसी उपलब्ध है।
+                    गिडोह , बदनगढ़, लोहरवारी, जाव, संकेत, महराना के छात्रों को सरकारी फॉर्म भरने के लिए दूर जाने या कैफे पर अतिरिक्त पैसे देने की आवश्यकता नहीं है। हमारा सर्विस चार्ज = ₹0। बुजुर्गों हेतु घर बैठे पेंशन ई-केवाईसी उपलब्ध है।
                 </p>
                 <div class="hero-btns">
                     <a href="#services-directory" class="btn-saffron">
@@ -825,7 +925,7 @@
                 <form onsubmit="handleCitizenSubmit(event)">
                     <div class="form-mini-group">
                         <label>आवेदक का नाम व गाँव *</label>
-                        <input type="text" id="citizen_name" placeholder="अपना नाम व गाँव दर्ज करें (उदा. विष्णु - गिडोह)" required>
+                        <input type="text" id="citizen_name" placeholder="अपना नाम व गाँव दर्ज करें (उदा. विष्णु - गिडोह )" required>
                     </div>
                     <div class="form-mini-group">
                         <label>व्हाट्सएप मोबाइल नंबर *</label>
@@ -837,7 +937,7 @@
                             <option value="सरकारी भर्ती आवेदन (0% फीस)">सरकारी भर्ती आवेदन (0% सर्विस फीस)</option>
                             <option value="EPFO / PF फंड निकासी">EPFO / PF फंड निकासी व e-KYC</option>
                             <option value="बुजुर्ग पेंशन घर-बैठे सेवा">बुजुर्ग पेंशन / ई-केवाईसी (घर पर सेवा)</option>
-                            <option value="कन्या सुमंगला / विवाह योजना">कन्या सुमंगला / विवाह अनुदान योजना[cite: 9]</option>
+                            <option value="कन्या सुमंगला / विवाह योजना">कन्या सुमंगला / विवाह अनुदान योजना</option>
                             <option value="ड्राइविंग लाइसेंस (LL/DL)">ड्राइविंग लाइसेंस (LL/DL)</option>
                             <option value="आय / जाति / निवास प्रमाण">आय / जाति / निवास प्रमाण पत्र</option>
                             <option value="उद्यम रजिस्ट्रेशन / पैन कार्ड">उद्यम रजिस्ट्रेशन / नया पैन कार्ड</option>
@@ -949,10 +1049,10 @@
                     <div class="srv-badge badge-free">0% सर्विस चार्ज</div>
                     <div class="srv-icon"><i class="fa-solid fa-child-reaching"></i></div>
                     <h3>मुख्यमंत्री कन्या सुमंगला योजना</h3>
-                    <p>बेटी के जन्म से 12वीं/डिग्री तक कुल ₹25,000 की सरकारी शिक्षा सहायता राशि सीधे खाते में[cite: 9]。</p>
+                    <p>बेटी के जन्म से 12वीं/डिग्री तक कुल ₹25,000 की सरकारी शिक्षा सहायता राशि सीधे खाते में。</p>
                     <div class="srv-pricing">
-                        <span class="mkt-rate">बाजार: ₹100–₹150[cite: 9]</span>
-                        <span class="our-rate">हमारा चार्ज: ₹0 (मुफ़्त)[cite: 9]</span>
+                        <span class="mkt-rate">बाजार: ₹100–₹150</span>
+                        <span class="our-rate">हमारा चार्ज: ₹0 (मुफ़्त)</span>
                     </div>
                     <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20कन्या%20सुमंगला%20योजना%20का%20फॉर्म%20भरवाना%20है।" class="srv-btn btn-green">
                         <i class="fa-brands fa-whatsapp"></i> निःशुल्क आवेदन करें
@@ -964,10 +1064,10 @@
                     <div class="srv-badge badge-free">0% सर्विस चार्ज</div>
                     <div class="srv-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
                     <h3>मुख्यमंत्री सामूहिक विवाह योजना</h3>
-                    <p>गरीब कन्या विवाह हेतु कुल ₹1 लाख का लाभ (₹60,000 नकद दुल्हन खाते में + ₹25,000 उपहार)[cite: 9]。</p>
+                    <p>गरीब कन्या विवाह हेतु कुल ₹1 लाख का लाभ (₹60,000 नकद दुल्हन खाते में + ₹25,000 उपहार)。</p>
                     <div class="srv-pricing">
-                        <span class="mkt-rate">बाजार: ₹150–₹200[cite: 9]</span>
-                        <span class="our-rate">हमारा चार्ज: ₹0 (मुफ़्त)[cite: 9]</span>
+                        <span class="mkt-rate">बाजार: ₹150–₹200</span>
+                        <span class="our-rate">हमारा चार्ज: ₹0 (मुफ़्त)</span>
                     </div>
                     <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सामूहिक%20विवाह%20योजना%20का%20फॉर्म%20भरवाना%20है।" class="srv-btn btn-green">
                         <i class="fa-brands fa-whatsapp"></i> निःशुल्क आवेदन करें
@@ -979,7 +1079,7 @@
                     <div class="srv-badge badge-home">घर बैठे सुविधा</div>
                     <div class="srv-icon"><i class="fa-solid fa-person-dress"></i></div>
                     <h3>निराश्रित महिला (विधवा) पेंशन</h3>
-                    <p>₹1,000 प्रति माह पेंशन[cite: 12]। बुजुर्ग माताओं के लिए घर आकर बायोमेट्रिक/ओटीपी सत्यापन।</p>
+                    <p>₹1,000 प्रति माह पेंशन। बुजुर्ग माताओं के लिए घर आकर बायोमेट्रिक/ओटीपी सत्यापन।</p>
                     <div class="srv-pricing">
                         <span class="mkt-rate">बाजार: ब्लॉक के चक्कर</span>
                         <span class="our-rate">विजिट चार्ज: मात्र ₹50</span>
@@ -1080,6 +1180,28 @@
                 </div>
 
             </div>
+
+            <!-- Custom Service Request & Village Suggestion Box -->
+            <div class="suggestion-box-card">
+                <div>
+                    <span style="background: #e0f2fe; color: #0369a1; font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 50px; text-transform: uppercase;">
+                        नागरिक सुझाव व नई सेवा मंच
+                    </span>
+                    <h3 style="margin-top: 8px;">आपकी ज़रूरत की सेवा यहाँ नहीं मिली?</h3>
+                    <p>
+                        यदि आपको किसी ऐसी सरकारी योजना, छात्रवृत्ति, निजी काम या प्रमाण पत्र की आवश्यकता है जो ऊपर सूचीबद्ध नहीं है, या आप केंद्र की बेहतरी के लिए कोई सुझाव देना चाहते हैं, तो कृपया हमें बताएं। हम 24 घंटे के भीतर उस सेवा को उपलब्ध कराएंगे।
+                    </p>
+                </div>
+                <form onsubmit="handleSuggestionSubmit(event)" class="sugg-form-grid">
+                    <input type="text" id="sugg_name" placeholder="आपका नाम व गाँव *" required>
+                    <input type="tel" id="sugg_phone" placeholder="व्हाट्सएप नंबर *" required>
+                    <textarea id="sugg_message" placeholder="वांछित सेवा का नाम या अपना सुझाव विस्तार से लिखें... *" required></textarea>
+                    <button type="submit" class="btn-send-sugg">
+                        <i class="fa-brands fa-whatsapp"></i> नई सेवा / सुझाव सीधे विष्णु जी को भेजें
+                    </button>
+                </form>
+            </div>
+
         </div>
     </section>
 
@@ -1153,15 +1275,15 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; font-size: 0.88rem;">
                     <div style="background: #fef2f2; padding: 12px 14px; border-radius: 8px; border: 1px solid #fee2e2;">
                         <strong style="color: #b91c1c;">⚠️ आय प्रमाण-पत्र की वैधता:</strong>
-                        <p style="color: #4b5563; margin-top: 4px;">आय प्रमाण-पत्र 3 वर्ष से अधिक पुराना न हो। कन्या सुमंगला में परिवार की वार्षिक आय ₹3 लाख से कम अनिवार्य है[cite: 9]!</p>
+                        <p style="color: #4b5563; margin-top: 4px;">आय प्रमाण-पत्र 3 वर्ष से अधिक पुराना न हो। कन्या सुमंगला में परिवार की वार्षिक आय ₹3 लाख से कम अनिवार्य है!</p>
                     </div>
                     <div style="background: #fef2f2; padding: 12px 14px; border-radius: 8px; border: 1px solid #fee2e2;">
                         <strong style="color: #b91c1c;">⚠️ बैंक खाता & नाम मिलान:</strong>
-                        <p style="color: #4b5563; margin-top: 4px;">पहचान पत्र और बैंक पासबुक में नाम व जन्मतिथि की स्पेलिंग अक्षर-ब-अक्षर समान होनी चाहिए[cite: 9, 12]!</p>
+                        <p style="color: #4b5563; margin-top: 4px;">पहचान पत्र और बैंक पासबुक में नाम व जन्मतिथि की स्पेलिंग अक्षर-ब-अक्षर समान होनी चाहिए!</p>
                     </div>
                     <div style="background: #fef2f2; padding: 12px 14px; border-radius: 8px; border: 1px solid #fee2e2;">
                         <strong style="color: #b91c1c;">⚠️ आयु सीमा व प्रमाण:</strong>
-                        <p style="color: #4b5563; margin-top: 4px;">सामूहिक विवाह हेतु कन्या की आयु 18+ और वर की 21+ पूर्ण होनी चाहिए[cite: 9]। वैध जन्म प्रमाण पत्र अनिवार्य है[cite: 9]!</p>
+                        <p style="color: #4b5563; margin-top: 4px;">सामूहिक विवाह हेतु कन्या की आयु 18+ और वर की 21+ पूर्ण होनी चाहिए। वैध जन्म प्रमाण पत्र अनिवार्य है!</p>
                     </div>
                 </div>
                 <p style="text-align: right; font-size: 0.82rem; color: #047857; margin-top: 12px; font-weight: 700;">
@@ -1218,7 +1340,7 @@
             <div class="operator-info-right">
                 <h3>हमारा संकल्प: "पारदर्शिता, सेवा और तकनीक"</h3>
                 <p>
-                    मेरा उद्देश्य नंदगांव, बरसाना, गिडोह, बदनगढ़, लोहरवारी, जाव, संकेत और महराना के हर नागरिक, छात्र और बुजुर्ग को डिजिटल दुनिया से जोड़ना है ताकि किसी को भी बुनियादी सेवाओं के लिए अधिक पैसे न देने पड़ें और न ही परेशान होना पड़े।
+                    मेरा उद्देश्य नंदगांव, बरसाना, गिडोह , बदनगढ़, लोहरवारी, जाव, संकेत और महराना के हर नागरिक, छात्र और बुजुर्ग को डिजिटल दुनिया से जोड़ना है ताकि किसी को भी बुनियादी सेवाओं के लिए अधिक पैसे न देने पड़ें और न ही परेशान होना पड़े।
                 </p>
                 <ul class="commitment-list">
                     <li><i class="fa-solid fa-circle-check"></i> किसी भी सरकारी फॉर्म में कोई गुप्त शुल्क नहीं लिया जाएगा।</li>
@@ -1237,12 +1359,12 @@
                 सेवा क्षेत्र (Service Area Coverage - नंदगांव, बरसाना एवं निकटवर्ती समस्त ग्राम)
             </h4>
             <p>
-                ई-नंदगांव डिजिटल सेवा केंद्र <strong>नंदगांव (पिन कोड 281403)</strong>, <strong>बरसाना</strong>, <strong>गिडोह (Gidoh)</strong>, <strong>बदनगढ़ (Badangarh)</strong>, <strong>लोहरवारी (Loharwari)</strong>, <strong>जाव (Jao / Jav)</strong>, <strong>संकेत (Sanket)</strong>, <strong>महराना (Mahrana)</strong>, छाता देहात, कोसी कलां, कामां बॉर्डर और आसपास के समस्त ब्रज ग्रामीण क्षेत्रों के नागरिकों व विद्यार्थियों को पारदर्शी ऑनलाइन सेवाएं व घर बैठे पेंशन ई-केवाईसी उपलब्ध कराता है।
+                ई-नंदगांव डिजिटल सेवा केंद्र <strong>नंदगांव (पिन कोड 281403)</strong>, <strong>बरसाना</strong>, <strong>गिडोह  (Gidoh)</strong>, <strong>बदनगढ़ (Badangarh)</strong>, <strong>लोहरवारी (Loharwari)</strong>, <strong>जाव (Jao / Jav)</strong>, <strong>संकेत (Sanket)</strong>, <strong>महराना (Mahrana)</strong>, छाता देहात, कोसी कलां, कामां बॉर्डर और आसपास के समस्त ब्रज ग्रामीण क्षेत्रों के नागरिकों व विद्यार्थियों को पारदर्शी ऑनलाइन सेवाएं व घर बैठे पेंशन ई-केवाईसी उपलब्ध कराता है।
             </p>
             <div class="coverage-tags">
                 <span class="cov-pill">नंदगांव (281403)</span>
                 <span class="cov-pill">बरसाना (Barsana)</span>
-                <span class="cov-pill">गिडोह (Gidoh)</span>
+                <span class="cov-pill">गिडोह  (Gidoh)</span>
                 <span class="cov-pill">बदनगढ़ (Badangarh)</span>
                 <span class="cov-pill">लोहरवारी (Loharwari)</span>
                 <span class="cov-pill">जाव (Jao)</span>
@@ -1260,7 +1382,7 @@
             <div class="footer-col">
                 <h4>ई-नंदगांव जन सेवा केंद्र</h4>
                 <p>
-                    नंदगांव, बरसाना, गिडोह, बदनगढ़, संकेत, जाव एवं छाता क्षेत्र के नागरिकों, विद्यार्थियों एवं व्यापारियों को पारदर्शी एवं त्वरित ऑनलाइन सेवाएं प्रदान करने के लिए समर्पित जनहित डिजिटल सेवा केंद्र।
+                    नंदगांव, बरसाना, गिडोह , बदनगढ़, संकेत, जाव एवं छाता क्षेत्र के नागरिकों, विद्यार्थियों एवं व्यापारियों को पारदर्शी एवं त्वरित ऑनलाइन सेवाएं प्रदान करने के लिए समर्पित जनहित डिजिटल सेवा केंद्र।
                 </p>
             </div>
             <div class="footer-col">
@@ -1282,7 +1404,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ई-नंदगांव जन सेवा केंद्र (enandgaon.com) | जनहित में समर्पित डिजिटल पहल (नंदगांव • बरसाना • गिडोह • बदनगढ़ • संकेत • जाव • महराना)</p>
+            <p>&copy; 2026 ई-नंदगांव जन सेवा केंद्र (enandgaon.com) | जनहित में समर्पित डिजिटल पहल (नंदगांव • बरसाना • गिडोह  • बदनगढ़ • संकेत • जाव • महराना)</p>
         </div>
     </footer>
 
@@ -1302,7 +1424,18 @@
             window.open(`https://wa.me/917988807962?text=${text}`, '_blank');
         }
 
-        // 2. Tab Filter Function
+        // 2. Custom Service Request & Suggestion WhatsApp Handler
+        function handleSuggestionSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('sugg_name').value.trim();
+            const phone = document.getElementById('sugg_phone').value.trim();
+            const message = document.getElementById('sugg_message').value.trim();
+
+            const text = `*ई-नंदगांव नई सेवा अनुरोध / नागरिक सुझाव*%0A%0A*आवेदक का नाम व गाँव:* ${encodeURIComponent(name)}%0A*मोबाइल नंबर:* ${encodeURIComponent(phone)}%0A*विवरण / सुझाव:* ${encodeURIComponent(message)}%0A%0Aकृपया इस सेवा के संबंध में मार्गदर्शन करें।`;
+            window.open(`https://wa.me/917988807962?text=${text}`, '_blank');
+        }
+
+        // 3. Tab Filter Function
         function filterServices(category, btnElement) {
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
@@ -1322,7 +1455,7 @@
             });
         }
 
-        // 3. Icon Mapper (Converts Material/Clean names to FontAwesome classes)
+        // 4. Icon Mapper (Converts Material/Clean names to FontAwesome classes)
         function formatIconClass(icon) {
             if (!icon) return 'fa-solid fa-briefcase';
             if (icon.startsWith('fa-')) return icon;
@@ -1343,7 +1476,7 @@
             return mapping[icon] || 'fa-solid fa-star';
         }
 
-        // 4. Live Data Fetcher from Google Sheets
+        // 5. Live Data Fetcher from Google Sheets
         async function fetchLiveSheetData() {
             try {
                 const response = await fetch(GOOGLE_SHEET_API);
@@ -1412,7 +1545,7 @@
             }
         }
 
-        // 5. Scheme Eligibility Calculator
+        // 6. Scheme Eligibility Calculator
         function calculateSchemes() {
             const target = document.getElementById('calc_target').value;
             const income = document.getElementById('calc_income').value;
@@ -1424,36 +1557,36 @@
 
             if (target === 'girl_child') {
                 if (income === 'under_2' || income === 'under_3') {
-                    schemes.push("<strong>मुख्यमंत्री कन्या सुमंगला योजना:</strong> ₹25,000 की कुल शिक्षा सहायता राशि[cite: 9]।");
+                    schemes.push("<strong>मुख्यमंत्री कन्या सुमंगला योजना:</strong> ₹25,000 की कुल शिक्षा सहायता राशि।");
                     totalBenefit += 25000;
-                    schemes.push("<strong>कन्या विद्या धन योजना:</strong> 12वीं उत्तीर्ण मेधावी छात्राओं को ₹30,000 एकमुश्त[cite: 10]।");
+                    schemes.push("<strong>कन्या विद्या धन योजना:</strong> 12वीं उत्तीर्ण मेधावी छात्राओं को ₹30,000 एकमुश्त।");
                     totalBenefit += 30000;
                 }
                 if (labor === 'yes') {
-                    schemes.push("<strong>BOCW श्रमिक बालिका मदद योजना:</strong> पुत्री जन्म पर ₹25,000 नकद/सावधि जमा[cite: 11]।");
+                    schemes.push("<strong>BOCW श्रमिक बालिका मदद योजना:</strong> पुत्री जन्म पर ₹25,000 नकद/सावधि जमा।");
                     totalBenefit += 25000;
                 }
             } else if (target === 'marriage') {
                 if (income === 'under_2' || income === 'under_3') {
-                    schemes.push("<strong>मुख्यमंत्री सामूहिक विवाह योजना:</strong> ₹1,00,000 का कुल पैकेज (₹60,000 सीधे दुल्हन के खाते में + ₹25,000 उपहार सामान)[cite: 9]।");
+                    schemes.push("<strong>मुख्यमंत्री सामूहिक विवाह योजना:</strong> ₹1,00,000 का कुल पैकेज (₹60,000 सीधे दुल्हन के खाते में + ₹25,000 उपहार सामान)।");
                     totalBenefit += 100000;
                 }
                 if (labor === 'yes') {
-                    schemes.push("<strong>BOCW निर्माण श्रमिक कन्या विवाह सहायता:</strong> ₹55,000 प्रति कन्या शादी अनुदान[cite: 11]।");
+                    schemes.push("<strong>BOCW निर्माण श्रमिक कन्या विवाह सहायता:</strong> ₹55,000 प्रति कन्या शादी अनुदान।");
                     totalBenefit += 55000;
                 }
             } else if (target === 'widow') {
                 if (income === 'under_2') {
-                    schemes.push("<strong>निराश्रित महिला (विधवा) पेंशन:</strong> ₹1,000 प्रतिमाह (वार्षिक ₹12,000) सीधे बैंक खाते में[cite: 12]।");
+                    schemes.push("<strong>निराश्रित महिला (विधवा) पेंशन:</strong> ₹1,000 प्रतिमाह (वार्षिक ₹12,000) सीधे बैंक खाते में।");
                     totalBenefit += 12000;
                 } else {
-                    schemes.push("निराश्रित पेंशन के लिए परिवार की वार्षिक आय ₹2 लाख से कम होना अनिवार्य है[cite: 12]।");
+                    schemes.push("निराश्रित पेंशन के लिए परिवार की वार्षिक आय ₹2 लाख से कम होना अनिवार्य है।");
                 }
             } else if (target === 'pregnant') {
-                schemes.push("<strong>प्रधानमंत्री मातृ वंदना योजना (PMMVY 2.0):</strong> प्रथम शिशु पर ₹5,000 एवं दूसरी संतान बालिका होने पर ₹6,000 पोषण सहायता[cite: 12]।");
+                schemes.push("<strong>प्रधानमंत्री मातृ वंदना योजना (PMMVY 2.0):</strong> प्रथम शिशु पर ₹5,000 एवं दूसरी संतान बालिका होने पर ₹6,000 पोषण सहायता।");
                 totalBenefit += 6000;
                 if (labor === 'yes') {
-                    schemes.push("<strong>BOCW मातृत्व हितलाभ:</strong> 3 माह का न्यूनतम वेतन + ₹1,000 चिकित्सा भत्ता[cite: 11]।");
+                    schemes.push("<strong>BOCW मातृत्व हितलाभ:</strong> 3 माह का न्यूनतम वेतन + ₹1,000 चिकित्सा भत्ता।");
                     totalBenefit += 20000;
                 }
             } else if (target === 'student') {
