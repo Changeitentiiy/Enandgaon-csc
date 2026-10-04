@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ई-नंदगांव जन सेवा केंद्र | जनहित डिजिटल सेवा पोर्टल</title>
     <meta name="description" content="ई-नंदगांव जन सेवा केंद्र (मथुरा) - विद्यार्थियों के लिए सभी सरकारी फॉर्म 0% सर्विस चार्ज पर एवं बुजुर्ग माताओं-पिताओं के लिए घर बैठे पेंशन व ई-केवाईसी सेवा।">
-    <meta name="keywords" content="eNandgaon, Nandgaon CSC, Jan Seva Kendra Nandgaon, Sarkari Form Free, Pension KYC Nandgaon Mathura">
+    <meta name="keywords" content="eNandgaon, Nandgaon CSC, Jan Seva Kendra Nandgaon, Sarkari Form Free, Pension KYC Nandgaon Mathura, Vishnu Kumar">
+    <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- Open Graph for WhatsApp Sharing -->
+    <!-- Open Graph for WhatsApp & Social Sharing -->
     <meta property="og:title" content="ई-नंदगांव जन सेवा केंद्र - जनहित में डिजिटल पहल">
     <meta property="og:description" content="छात्रों के लिए सभी सरकारी फॉर्म 0% सर्विस फीस पर। घर बैठे बुजुर्ग पेंशन सेवा।">
     <meta property="og:url" content="https://enandgaon.com">
     <meta property="og:type" content="website">
 
-    <!-- Fonts & Icons -->
+    <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -55,11 +56,11 @@
             background: linear-gradient(90deg, #f97316 0%, #f97316 33.3%, #ffffff 33.3%, #ffffff 66.6%, #15803d 66.6%, #15803d 100%);
         }
 
-        /* Government Portal Style Top Bar */
+        /* Portal Top Bar */
         .portal-topbar {
             background-color: var(--gov-dark);
             color: #e2e8f0;
-            padding: 7px 5%;
+            padding: 8px 5%;
             font-size: 0.84rem;
             display: flex;
             justify-content: space-between;
@@ -75,13 +76,13 @@
             color: var(--gold);
             text-decoration: none;
             margin-left: 12px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         /* Header Navigation */
         header.main-header {
             background-color: var(--white);
-            padding: 16px 5%;
+            padding: 14px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -91,34 +92,30 @@
         .brand {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 14px;
             text-decoration: none;
         }
-        .brand-emblem {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--gov-blue), #1e3a8a);
-            color: var(--white);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            border: 2px solid var(--gold);
+        .site-logo {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        .site-logo:hover {
+            transform: scale(1.05);
         }
         .brand-text h1 {
             font-size: 1.45rem;
             font-weight: 800;
             color: var(--gov-blue);
             line-height: 1.2;
-            letter-spacing: -0.3px;
         }
         .brand-text p {
             font-size: 0.82rem;
             color: var(--text-gray);
             font-weight: 600;
         }
-
         .header-cta {
             display: flex;
             gap: 12px;
@@ -135,9 +132,13 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 10px rgba(37, 211, 102, 0.25);
+            transition: 0.2s;
+        }
+        .btn-call:hover {
+            background: #1ebd5a;
         }
 
-        /* Live Notice Ticker */
+        /* Notice Ticker */
         .notice-ticker {
             background: #fffbeb;
             border-top: 1px solid #fde68a;
@@ -164,12 +165,11 @@
             100% { opacity: 1; }
         }
 
-        /* Hero Janhit Section */
+        /* Hero Section */
         .janhit-hero {
             background: linear-gradient(135deg, var(--gov-blue) 0%, #173868 100%);
             color: var(--white);
             padding: 55px 5%;
-            position: relative;
         }
         .hero-wrapper {
             max-width: 1200px;
@@ -194,7 +194,6 @@
             margin-bottom: 25px;
             max-width: 580px;
         }
-
         .hero-badges-row {
             display: flex;
             gap: 12px;
@@ -213,7 +212,6 @@
             gap: 6px;
         }
         .hero-tag i { color: var(--gold); }
-
         .hero-btns {
             display: flex;
             gap: 15px;
@@ -231,6 +229,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+            transition: 0.2s;
         }
         .btn-saffron:hover { background: #ea580c; }
         .btn-outline {
@@ -243,10 +242,11 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            transition: 0.2s;
         }
         .btn-outline:hover { background: rgba(255,255,255,0.1); }
 
-        /* Right Quick Seva Card */
+        /* Quick Seva Form Card */
         .quick-seva-card {
             background: var(--white);
             color: var(--text-dark);
@@ -286,6 +286,10 @@
             border: 1px solid #cbd5e1;
             border-radius: 6px;
             font-size: 0.92rem;
+            outline: none;
+        }
+        .form-mini-group input:focus, .form-mini-group select:focus {
+            border-color: var(--gov-blue);
         }
         .btn-submit-quick {
             width: 100%;
@@ -302,9 +306,11 @@
             justify-content: center;
             gap: 8px;
             margin-top: 10px;
+            transition: 0.2s;
         }
+        .btn-submit-quick:hover { background: #1ebd5a; }
 
-        /* Comparison Price Table (Janhit Transparency) */
+        /* Price Transparency Table */
         .transparency-section {
             max-width: 1200px;
             margin: -35px auto 40px;
@@ -339,151 +345,159 @@
         }
         .compare-grid:last-child { border-bottom: none; }
         .service-title-col { font-weight: 600; color: var(--text-dark); }
-        .market-rate-col { color: #dc2626; font-weight: 600; }
+        .market-rate-col { color: #dc2626; font-weight: 600; text-decoration: line-through; }
         .enandgaon-rate-col { color: var(--green); font-weight: 800; }
 
-        /* Core Services Grid (4 Pillars) */
+        /* Global Container & Heading */
         .container {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
         .section-heading-center {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
         .section-badge {
             background: var(--saffron-light);
             color: var(--saffron);
             font-size: 0.82rem;
             font-weight: 800;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 50px;
             display: inline-block;
             margin-bottom: 8px;
             border: 1px solid #fed7aa;
         }
         .section-heading-center h2 {
-            font-size: 2rem;
+            font-size: 2.1rem;
             color: var(--gov-blue);
             font-weight: 800;
         }
 
-        .janhit-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+        /* Filter Tabs */
+        .service-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
         }
-        .janhit-card {
-            background: var(--white);
-            border-radius: 12px;
+        .tab-btn {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #475569;
+            padding: 9px 18px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .tab-btn:hover {
+            background: #f1f5f9;
+            color: var(--gov-blue);
+        }
+        .tab-btn.active {
+            background: var(--gov-blue) !important;
+            color: #ffffff !important;
+            border-color: var(--gov-blue) !important;
+            box-shadow: 0 4px 12px rgba(11, 37, 69, 0.25);
+        }
+
+        /* Service Cards */
+        .services-list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .srv-card {
+            background: #ffffff;
             border: 1px solid #e2e8f0;
-            padding: 28px;
+            border-radius: 12px;
+            padding: 24px;
             position: relative;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .janhit-card.pillar-student {
-            border-top: 4px solid var(--green);
+        .srv-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            border-color: #cbd5e1;
         }
-        .janhit-card.pillar-elder {
-            border-top: 4px solid var(--saffron);
-        }
-        .janhit-card.pillar-citizen {
-            border-top: 4px solid var(--gov-blue);
-        }
-        .janhit-card.pillar-merchant {
-            border-top: 4px solid var(--gold);
-        }
-
-        .card-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-        .card-icon-title {
+        .srv-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background: #eff6ff;
+            color: #0284c7;
             display: flex;
             align-items: center;
-            gap: 12px;
-        }
-        .card-icon-title i {
-            font-size: 1.5rem;
-            color: var(--gov-blue);
-        }
-        .card-icon-title h3 {
+            justify-content: center;
             font-size: 1.25rem;
-            font-weight: 800;
+            margin-bottom: 14px;
+        }
+        .srv-card h3 {
+            font-size: 1.12rem;
             color: var(--gov-blue);
-        }
-        .pill-free {
-            background: var(--green-light);
-            color: var(--green);
             font-weight: 800;
-            font-size: 0.78rem;
-            padding: 4px 10px;
-            border-radius: 20px;
+            margin-bottom: 8px;
         }
-        .pill-home {
-            background: var(--saffron-light);
-            color: var(--saffron);
-            font-weight: 800;
-            font-size: 0.78rem;
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
-
-        .janhit-card p.card-summary {
-            font-size: 0.92rem;
-            color: var(--text-gray);
+        .srv-card p {
+            font-size: 0.86rem;
+            color: #64748b;
+            line-height: 1.5;
             margin-bottom: 16px;
         }
-
-        .card-features-list {
-            list-style: none;
-            margin-bottom: 22px;
+        .srv-badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 3px 9px;
+            border-radius: 20px;
         }
-        .card-features-list li {
-            padding: 7px 0;
-            font-size: 0.92rem;
-            border-bottom: 1px dashed #f1f5f9;
+        .badge-discount { background: #e0f2fe; color: #0369a1; }
+        .badge-free { background: #dcfce7; color: #15803d; }
+        .badge-home { background: #ffedd5; color: #c2410c; }
+        .srv-pricing {
+            background: #f8fafc;
+            border-radius: 6px;
+            padding: 8px 12px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 8px;
+            font-size: 0.82rem;
+            margin-bottom: 14px;
+            border: 1px dashed #cbd5e1;
         }
-        .card-features-list li i {
-            color: var(--green);
-            font-size: 0.85rem;
-        }
-
-        .btn-card-action {
+        .mkt-rate { color: #dc2626; text-decoration: line-through; }
+        .our-rate { color: var(--green); font-weight: 800; }
+        .srv-btn {
             display: block;
             text-align: center;
-            padding: 12px;
-            border-radius: 6px;
+            background: #0284c7;
+            color: #ffffff;
             text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.88rem;
+            transition: 0.2s;
         }
-        .btn-green-card {
-            background: var(--green);
-            color: var(--white);
-        }
-        .btn-green-card:hover { background: #166534; }
-        .btn-saffron-card {
-            background: var(--saffron);
-            color: var(--white);
-        }
-        .btn-saffron-card:hover { background: #ea580c; }
-        .btn-blue-card {
-            background: var(--gov-blue);
-            color: var(--white);
-        }
-        .btn-blue-card:hover { background: #06152b; }
+        .srv-btn:hover { background: #0369a1; }
+        .srv-btn.btn-green { background: var(--green); }
+        .srv-btn.btn-green:hover { background: #166534; }
+        .srv-btn.btn-saffron { background: var(--saffron); }
+        .srv-btn.btn-saffron:hover { background: #ea580c; }
 
-        /* How to Avail Services (Janhit Steps) */
+        /* Process Steps */
         .process-flow {
             background: var(--white);
             border: 1px solid #e2e8f0;
@@ -498,9 +512,7 @@
             margin-top: 25px;
             text-align: center;
         }
-        .step-box {
-            padding: 15px;
-        }
+        .step-box { padding: 15px; }
         .step-circle {
             width: 48px;
             height: 48px;
@@ -526,7 +538,7 @@
             color: var(--text-gray);
         }
 
-        /* Operator Guarantee & Transparency */
+        /* Operator Guarantee */
         .operator-section {
             background: linear-gradient(135deg, #f8fafc, #edf2f7);
             border-radius: 12px;
@@ -578,9 +590,7 @@
             color: var(--text-gray);
             margin-bottom: 14px;
         }
-        .commitment-list {
-            list-style: none;
-        }
+        .commitment-list { list-style: none; }
         .commitment-list li {
             font-size: 0.92rem;
             padding: 5px 0;
@@ -590,11 +600,11 @@
         }
         .commitment-list li i { color: var(--green); }
 
-        /* Public Footer */
+        /* Portal Footer */
         footer.portal-footer {
             background: var(--gov-dark);
             color: #94a3b8;
-            padding: 40px 5% 20px;
+            padding: 45px 5% 20px;
             margin-top: 60px;
         }
         .footer-cols {
@@ -613,9 +623,7 @@
             font-size: 0.88rem;
             line-height: 1.7;
         }
-        .footer-col ul {
-            list-style: none;
-        }
+        .footer-col ul { list-style: none; }
         .footer-col ul li {
             margin-bottom: 8px;
             font-size: 0.88rem;
@@ -623,7 +631,9 @@
         .footer-col ul li a {
             color: #cbd5e1;
             text-decoration: none;
+            transition: 0.2s;
         }
+        .footer-col ul li a:hover { color: var(--gold); }
         .footer-bottom {
             border-top: 1px solid rgba(255,255,255,0.08);
             padding-top: 20px;
@@ -631,9 +641,9 @@
             font-size: 0.82rem;
         }
 
-        /* Responsive Breakpoints */
+        /* Mobile Adjustments */
         @media (max-width: 900px) {
-            .hero-wrapper, .janhit-grid, .operator-section, .process-grid, .footer-cols {
+            .hero-wrapper, .operator-section, .process-grid, .footer-cols {
                 grid-template-columns: 1fr;
             }
             .hero-left h2 { font-size: 1.85rem; }
@@ -641,15 +651,16 @@
             .compare-grid { grid-template-columns: 1.2fr 1fr 1fr; font-size: 0.82rem; }
             header.main-header { flex-direction: column; gap: 15px; text-align: center; }
             .header-cta { width: 100%; justify-content: center; }
+            .site-logo { height: 44px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Tricolor National Strip -->
+    <!-- Tricolor Top Strip -->
     <div class="tricolor-strip"></div>
 
-    <!-- Top Citizen Alert Bar -->
+    <!-- Citizen Alert Topbar -->
     <div class="portal-topbar">
         <div class="location">
             <i class="fa-solid fa-location-dot" style="color: var(--saffron);"></i>
@@ -661,33 +672,31 @@
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Main Header -->
     <header class="main-header">
         <a href="https://enandgaon.com" class="brand">
-            <div class="brand-emblem">
-                <i class="fa-solid fa-landmark"></i>
-            </div>
+            <img src="logo.png" alt="eNandgaon Logo" class="site-logo">
             <div class="brand-text">
                 <h1>ई-नंदगांव जन सेवा केंद्र</h1>
                 <p>जनहित एवं ग्रामीण डिजिटल सहायता मिशन</p>
             </div>
         </a>
         <div class="header-cta">
-            <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सेवा%20चाहिए।" class="btn-call">
+            <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सहायता%20चाहिए।" class="btn-call">
                 <i class="fa-brands fa-whatsapp"></i> व्हाट्सएप सहायता
             </a>
         </div>
     </header>
 
-    <!-- Urgent Notification Ticker -->
+    <!-- Notice Ticker (Dynamic from Google Sheet) -->
     <div class="notice-ticker">
         <span class="ticker-badge">सूचना पट</span>
-        <marquee behavior="scroll" direction="left" scrollamount="6">
-            📢 UP पुलिस, SSC, रेलवे, अग्निवीर एवं विकास खंड रोजगार मेला आवेदन चालू हैं। बुजुर्ग पेंशन वार्षिक ई-केवाईसी सत्यापन के लिए घर बैठे सेवा उपलब्ध है।
+        <marquee id="live-notice-marquee" behavior="scroll" direction="left" scrollamount="6">
+            📢 UP पुलिस, SSC, रेलवे एवं रोजगार मेला आवेदन चालू हैं। बुजुर्ग पेंशन वार्षिक ई-केवाईसी सत्यापन के लिए घर बैठे सेवा उपलब्ध है।
         </marquee>
     </div>
 
-    <!-- Janhit Hero Banner -->
+    <!-- Hero Banner -->
     <section class="janhit-hero">
         <div class="hero-wrapper">
             <div class="hero-left">
@@ -701,7 +710,7 @@
                     छात्रों को सरकारी फॉर्म भरने के लिए साइबर कैफे पर ₹50-₹100 अतिरिक्त खर्च करने की आवश्यकता नहीं है। हमारा सर्विस चार्ज = ₹0। बुजुर्ग माताओं-पिताओं को ब्लॉक जाने की आवश्यकता नहीं, हम घर आकर पेंशन सत्यापन करेंगे।
                 </p>
                 <div class="hero-btns">
-                    <a href="#janhit-pillars" class="btn-saffron">
+                    <a href="#services-directory" class="btn-saffron">
                         <i class="fa-solid fa-list-check"></i> उपलब्ध सेवाएं देखें
                     </a>
                     <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सरकारी%20नौकरी%20का%20फॉर्म%20भरवाना%20है।" class="btn-outline">
@@ -726,11 +735,13 @@
                     <div class="form-mini-group">
                         <label>वांछित जनहित सेवा *</label>
                         <select id="citizen_service">
-                            <option value="विद्यार्थी सरकारी फॉर्म (0% फीस)">सरकारी नौकरी आवेदन (0% सर्विस फीस)</option>
+                            <option value="सरकारी भर्ती आवेदन (0% फीस)">सरकारी भर्ती आवेदन (0% सर्विस फीस)</option>
+                            <option value="EPFO / PF फंड निकासी">EPFO / PF फंड निकासी व e-KYC</option>
                             <option value="बुजुर्ग पेंशन घर-बैठे सेवा">बुजुर्ग पेंशन / ई-केवाईसी (घर पर सेवा)</option>
-                            <option value="एडमिट कार्ड / रिजल्ट पीडीएफ">एडमिट कार्ड / रिजल्ट फ्री डाउनलोड</option>
-                            <option value="पैन कार्ड आवेदन">नया पैन कार्ड (e-KYC)</option>
-                            <option value="व्यापारी उद्यम रजिस्ट्रेशन">दुकान/व्यापार उद्यम रजिस्ट्रेशन</option>
+                            <option value="कन्या सुमंगला / विवाह योजना">कन्या सुमंगला / विवाह अनुदान योजना[cite: 9]</option>
+                            <option value="ड्राइविंग लाइसेंस (LL/DL)">ड्राइविंग लाइसेंस (LL/DL)</option>
+                            <option value="आय / जाति / निवास प्रमाण">आय / जाति / निवास प्रमाण पत्र</option>
+                            <option value="उद्यम रजिस्ट्रेशन / पैन कार्ड">उद्यम रजिस्ट्रेशन / नया पैन कार्ड</option>
                         </select>
                     </div>
                     <button type="submit" class="btn-submit-quick">
@@ -754,126 +765,316 @@
                 <div>ई-नंदगांव जन सेवा केंद्र</div>
             </div>
             <div class="compare-grid">
-                <div class="service-title-col">सरकारी नौकरी फॉर्म आवेदन (SSC, Police, Railway)</div>
-                <div class="market-rate-col">पोर्टल फीस + ₹50 से ₹100 चार्ज</div>
+                <div class="service-title-col">सरकारी भर्ती आवेदन (SSC, Police, Railway)</div>
+                <div class="market-rate-col">पोर्टल फीस + ₹70–₹100</div>
                 <div class="enandgaon-rate-col">केवल पोर्टल फीस (हमारा चार्ज = ₹0)</div>
             </div>
             <div class="compare-grid">
-                <div class="service-title-col">एडमिट कार्ड & रिजल्ट चेक (व्हाट्सएप पीडीएफ)</div>
-                <div class="market-rate-col">₹10 से ₹20</div>
-                <div class="enandgaon-rate-col">100% निःशुल्क (₹0)</div>
+                <div class="service-title-col">EPFO / PF फंड निकासी (Form 31/19/10C)</div>
+                <div class="market-rate-col">₹300 से ₹500</div>
+                <div class="enandgaon-rate-col">मात्र ₹150 (50% से अधिक बचत)</div>
+            </div>
+            <div class="compare-grid">
+                <div class="service-title-col">लर्निंग व परमानेंट ड्राइविंग लाइसेंस (LL/DL)</div>
+                <div class="market-rate-col">₹500 से ₹800</div>
+                <div class="enandgaon-rate-col">मात्र ₹90 – ₹150 (50% डिस्काउंट)</div>
             </div>
             <div class="compare-grid">
                 <div class="service-title-col">बुजुर्ग पेंशन सत्यापन (घर आकर ई-केवाईसी)</div>
-                <div class="market-rate-col">ब्लॉक/बाजार आने-जाने का कष्ट व खर्च</div>
+                <div class="market-rate-col">ब्लॉक/बाजार जाने का कष्ट व खर्च</div>
                 <div class="enandgaon-rate-col">घर बैठे सुविधा (मात्र ₹50 सहयोग शुल्क)</div>
             </div>
         </div>
     </div>
 
-    <!-- Janhit 4 Core Pillars -->
-    <div class="container" id="janhit-pillars">
-        <div class="section-heading-center">
-            <span class="section-badge">ग्राम सेवा संकल्प</span>
-            <h2>नागरिक सहायता सेवाएं</h2>
-            <p style="color: var(--text-gray); font-size: 0.95rem; margin-top: 6px;">प्रत्येक वर्ग के लिए समर्पित, निष्पक्ष और सटीक ऑनलाइन व्यवस्था</p>
+    <!-- Systematic Citizen Services Directory -->
+    <section id="services-directory" style="background: #f8fafc; padding: 30px 5% 65px;">
+        <div class="container" style="margin: 0 auto;">
+            
+            <div class="section-heading-center">
+                <span class="section-badge">डिजिटल नागरिक सेवा सूची</span>
+                <h2>ई-नंदगांव संपूर्ण सेवा केंद्र</h2>
+                <p style="color: #64748b; font-size: 0.95rem; max-width: 650px; margin: 8px auto 0;">
+                    सरकारी पोर्टलों के सभी कार्य 50% रियायती सेवा शुल्क पर एवं विद्यार्थियों के सभी फॉर्म 100% मुफ़्त।
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="service-tabs">
+                <button class="tab-btn active" onclick="filterServices('all', this)">सभी सेवाएं</button>
+                <button class="tab-btn" onclick="filterServices('epfo', this)"><i class="fa-solid fa-building-columns"></i> EPFO / PF सेवाएं</button>
+                <button class="tab-btn" onclick="filterServices('women', this)"><i class="fa-solid fa-person-dress"></i> मातृशक्ति & कन्या</button>
+                <button class="tab-btn" onclick="filterServices('edistrict', this)"><i class="fa-solid fa-file-shield"></i> आय / जाति / निवास</button>
+                <button class="tab-btn" onclick="filterServices('transport', this)"><i class="fa-solid fa-id-card"></i> DL & वाहन सेवाएं</button>
+                <button class="tab-btn" onclick="filterServices('shramik', this)"><i class="fa-solid fa-helmet-safety"></i> श्रमिक & किसान</button>
+                <button class="tab-btn" onclick="filterServices('student', this)"><i class="fa-solid fa-graduation-cap"></i> छात्र & भर्ती (0%)</button>
+                <button class="tab-btn" onclick="filterServices('merchant', this)"><i class="fa-solid fa-store"></i> व्यापार & पैन कार्ड</button>
+            </div>
+
+            <!-- Dynamic Grid Container (Populated via Sheet API & Fallback Ready) -->
+            <div class="services-list-grid" id="services-grid-container">
+
+                <!-- DEFAULT FALLBACK CARDS -->
+                <!-- EPFO Card 1 -->
+                <div class="srv-card" data-category="epfo">
+                    <div class="srv-badge badge-discount">50% बचत</div>
+                    <div class="srv-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                    <h3>PF एडवांस / पूरा फंड निकासी</h3>
+                    <p>Form 31, 19, 10C के तहत बीमारी, शादी, मकान निर्माण या नौकरी छोड़ने पर PF बैलेंस विथड्रॉल।</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹300–₹500</span>
+                        <span class="our-rate">हमारा चार्ज: ₹150</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20EPFO/PF%20निकासी%20के%20लिए%20आवेदन%20करना%20है।" class="srv-btn">
+                        <i class="fa-brands fa-whatsapp"></i> PF क्लेम कराएं
+                    </a>
+                </div>
+
+                <!-- EPFO Card 2 -->
+                <div class="srv-card" data-category="epfo">
+                    <div class="srv-badge badge-discount">50% बचत</div>
+                    <div class="srv-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <h3>EPFO e-KYC & बैंक लिंकिंग</h3>
+                    <p>UAN एक्टिवेशन, बैंक खाता व पैन कार्ड लिंक और नाम/जन्मतिथि सुधार जॉइंट डिक्लेरेशन।</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹150–₹200</span>
+                        <span class="our-rate">हमारा चार्ज: ₹70</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20EPFO%20e-KYC%20या%20बैंक%20लिंक%20कराना%20है।" class="srv-btn">
+                        <i class="fa-brands fa-whatsapp"></i> e-KYC कराएं
+                    </a>
+                </div>
+
+                <!-- Women Card 1 -->
+                <div class="srv-card" data-category="women">
+                    <div class="srv-badge badge-free">0% सर्विस चार्ज</div>
+                    <div class="srv-icon"><i class="fa-solid fa-child-reaching"></i></div>
+                    <h3>मुख्यमंत्री कन्या सुमंगला योजना</h3>
+                    <p>बेटी के जन्म से 12वीं/डिग्री तक कुल ₹25,000 की सरकारी शिक्षा सहायता राशि सीधे खाते में[cite: 9]。</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹100–₹150[cite: 9]</span>
+                        <span class="our-rate">हमारा चार्ज: ₹0 (मुफ़्त)[cite: 9]</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20कन्या%20सुमंगला%20योजना%20का%20फॉर्म%20भरवाना%20है।" class="srv-btn btn-green">
+                        <i class="fa-brands fa-whatsapp"></i> निःशुल्क आवेदन करें
+                    </a>
+                </div>
+
+                <!-- Women Card 2 -->
+                <div class="srv-card" data-category="women">
+                    <div class="srv-badge badge-free">0% सर्विस चार्ज</div>
+                    <div class="srv-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3>मुख्यमंत्री सामूहिक विवाह योजना</h3>
+                    <p>गरीब कन्या विवाह हेतु कुल ₹1 लाख का लाभ (₹60,000 नकद दुल्हन खाते में + ₹25,000 उपहार)[cite: 9]。</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹150–₹200[cite: 9]</span>
+                        <span class="our-rate">हमारा चार्ज: ₹0 (मुफ़्त)[cite: 9]</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सामूहिक%20विवाह%20योजना%20का%20फॉर्म%20भरवाना%20है।" class="srv-btn btn-green">
+                        <i class="fa-brands fa-whatsapp"></i> निःशुल्क आवेदन करें
+                    </a>
+                </div>
+
+                <!-- Women Card 3 (Doorstep Pension) -->
+                <div class="srv-card" data-category="women">
+                    <div class="srv-badge badge-home">घर बैठे सुविधा</div>
+                    <div class="srv-icon"><i class="fa-solid fa-person-dress"></i></div>
+                    <h3>निराश्रित महिला (विधवा) पेंशन</h3>
+                    <p>₹1,000 प्रति माह पेंशन[cite: 12]। बुजुर्ग माताओं के लिए घर आकर बायोमेट्रिक/ओटीपी सत्यापन।</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ब्लॉक के चक्कर</span>
+                        <span class="our-rate">विजिट चार्ज: मात्र ₹50</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=प्रणाम%20विष्णु%20जी,%20मुझे%20घर%20पर%20विधवा%20पेंशन/ई-केवाईसी%20हेतु%20बुलाना%20है।" class="srv-btn btn-saffron">
+                        <i class="fa-solid fa-house-chimney-user"></i> घर पर बुलाएं
+                    </a>
+                </div>
+
+                <!-- eDistrict Card 1 -->
+                <div class="srv-card" data-category="edistrict">
+                    <div class="srv-badge badge-discount">50% बचत</div>
+                    <div class="srv-icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <h3>आय / जाति / मूल निवास प्रमाण पत्र</h3>
+                    <p>सरकारी ई-डिस्ट्रिक्ट पोर्टल से आधिकारिक प्रमाण पत्र। ऑनलाइन आवेदन व तुरंत डिजिटल प्रति[cite: 14]。</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹80–₹100[cite: 14]</span>
+                        <span class="our-rate">हमारा चार्ज: ₹40[cite: 14]</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20आय/जाति/निवास%20प्रमाण%20पत्र%20बनवाना%20है।" class="srv-btn">
+                        <i class="fa-brands fa-whatsapp"></i> प्रमाण पत्र बनवाएं
+                    </a>
+                </div>
+
+                <!-- eDistrict Card 2 (Bhulekh) -->
+                <div class="srv-card" data-category="edistrict">
+                    <div class="srv-badge badge-discount">50% बचत</div>
+                    <div class="srv-icon"><i class="fa-solid fa-map-location"></i></div>
+                    <h3>भूलेख खतौनी / खेत नक्शा नकल</h3>
+                    <p>भूलेख पोर्टल से प्रमाणित खतौनी की प्रतिलिपि व गाटा खसरा नंबर जांच सीधा व्हाट्सएप पीडीएफ[cite: 14]。</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹50[cite: 14]</span>
+                        <span class="our-rate">हमारा चार्ज: ₹20[cite: 14]</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20खतौनी%20नकल%20चाहिए।" class="srv-btn">
+                        <i class="fa-brands fa-whatsapp"></i> खतौनी निकालें
+                    </a>
+                </div>
+
+                <!-- Transport Card 1 (LL) -->
+                <div class="srv-card" data-category="transport">
+                    <div class="srv-badge badge-discount">50% बचत</div>
+                    <div class="srv-icon"><i class="fa-solid fa-car-side"></i></div>
+                    <h3>लर्निंग ड्राइविंग लाइसेंस (LL Apply)</h3>
+                    <p>सारथी परिवहन पोर्टल से नया लर्निंग लाइसेंस आवेदन, ऑनलाइन टेस्ट स्लॉट बुकिंग व कागज़ात अपलोड。</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹300–₹500</span>
+                        <span class="our-rate">हमारा चार्ज: ₹90</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20लर्निंग%20लाइसेंस%20(LL)%20बनवाना%20है।" class="srv-btn">
+                        <i class="fa-brands fa-whatsapp"></i> LL अप्लाई करें
+                    </a>
+                </div>
+
+                <!-- Shramik Card 1 (Ayushman) -->
+                <div class="srv-card" data-category="shramik">
+                    <div class="srv-badge badge-free">0% सर्विस चार्ज</div>
+                    <div class="srv-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>आयुष्मान भारत गोल्डन कार्ड</h3>
+                    <p>प्रति परिवार सालाना ₹5 लाख तक का मुफ़्त इलाज[cite: 13]। राशन कार्ड व सूची मिलान द्वारा नया कार्ड आवेदन।</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹50–₹100[cite: 13]</span>
+                        <span class="our-rate">हमारा चार्ज: ₹0 (मुफ़्त)[cite: 13]</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20आयुष्मान%20कार्ड%20बनवाना/चेक%20कराना%20है।" class="srv-btn btn-green">
+                        <i class="fa-brands fa-whatsapp"></i> आयुष्मान कार्ड चेक करें
+                    </a>
+                </div>
+
+                <!-- Student Card 1 (Govt Jobs) -->
+                <div class="srv-card" data-category="student">
+                    <div class="srv-badge badge-free">100% मुफ़्त</div>
+                    <div class="srv-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                    <h3>सभी सरकारी भर्ती फॉर्म (UP Police, SSC, Rly)</h3>
+                    <p>बिना किसी त्रुटि के ऑनलाइन आवेदन। सबमिट से पहले पूरा प्रीव्यू और पीडीएफ रसीद सीधे व्हाट्सएप पर।</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹70–₹100</span>
+                        <span class="our-rate">हमारा चार्ज: ₹0 (शून्य)</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सरकारी%20नौकरी%20का%20फॉर्म%20भरवाना%20है।" class="srv-btn btn-green">
+                        <i class="fa-brands fa-whatsapp"></i> फ्री फॉर्म भरवाएं
+                    </a>
+                </div>
+
+                <!-- Merchant Card 1 (PAN) -->
+                <div class="srv-card" data-category="merchant">
+                    <div class="srv-badge badge-discount">50% बचत</div>
+                    <div class="srv-icon"><i class="fa-solid fa-address-card"></i></div>
+                    <h3>नया पैन कार्ड (e-KYC द्वारा)</h3>
+                    <p>आधार ई-केवाईसी द्वारा 2 घंटे में ई-पैन और 7-10 दिनों में ओरिजिनल कार्ड घर के पते पर।</p>
+                    <div class="srv-pricing">
+                        <span class="mkt-rate">बाजार: ₹200–₹300</span>
+                        <span class="our-rate">हमारा चार्ज: ₹80</span>
+                    </div>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20पैन%20कार्ड%20बनवाना%20है।" class="srv-btn">
+                        <i class="fa-brands fa-whatsapp"></i> पैन कार्ड बनवाएं
+                    </a>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <div class="janhit-grid">
-            <!-- Pillar 1: Students -->
-            <div class="janhit-card pillar-student">
-                <div>
-                    <div class="card-top">
-                        <div class="card-icon-title">
-                            <i class="fa-solid fa-user-graduate" style="color: var(--green);"></i>
-                            <h3>छात्र एवं युवा डेस्क</h3>
-                        </div>
-                        <span class="pill-free">0% सर्विस चार्ज</span>
-                    </div>
-                    <p class="card-summary">गांव के प्रतिभाशाली युवाओं को आर्थिक बोझ से बचाने हेतु फॉर्म भरने की प्रक्रिया निःशुल्क सेवा भाव से की जाती है।</p>
-                    <ul class="card-features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> सभी सरकारी भर्ती (SSC, UP Police, रेलवे, टेट, अग्निवीर)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> सबमिट से पहले पूरा प्रीव्यू वेरिफिकेशन (ज़ीरो त्रुटि)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> एडमिट कार्ड और रिजल्ट सीधा आपके व्हाट्सएप पर</li>
-                        <li><i class="fa-solid fa-circle-check"></i> यूपी छात्रवृत्ति (UP Scholarship) ऑनलाइन आवेदन</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सरकारी%20भर्ती%20का%20फॉर्म%20भरवाना%20है।" class="btn-card-action btn-green-card">
-                    <i class="fa-brands fa-whatsapp"></i> फॉर्म भरवाने हेतु व्हाट्सएप करें
-                </a>
+    <!-- Interactive Eligibility Calculator & Rejection Prevention Desk -->
+    <section style="background: #ffffff; padding: 60px 5%; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            
+            <!-- Calculator Header -->
+            <div class="section-heading-center">
+                <span class="section-badge" style="background:#ecfdf5; color:#047857; border-color:#a7f3d0;">
+                    डिजिटल पात्रता जांच
+                </span>
+                <h2>योजना पात्रता कैलकुलेटर</h2>
+                <p style="color: #64748b; font-size: 0.95rem; margin-top: 6px;">
+                    केवल 3 विवरण चुनें और जानें कि आपको या आपके परिवार को सरकार से कितना आर्थिक लाभ मिल सकता है।
+                </p>
             </div>
 
-            <!-- Pillar 2: Elderly Pension -->
-            <div class="janhit-card pillar-elder">
-                <div>
-                    <div class="card-top">
-                        <div class="card-icon-title">
-                            <i class="fa-solid fa-person-cane" style="color: var(--saffron);"></i>
-                            <h3>वृद्धजन एवं पेंशन सेवा</h3>
-                        </div>
-                        <span class="pill-home">घर बैठे सुविधा</span>
+            <!-- Calculator Card -->
+            <div style="background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 14px; padding: 28px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 40px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-bottom: 20px;">
+                    
+                    <div>
+                        <label style="display: block; font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; color: #0f172a;">1. लाभार्थी कौन है?</label>
+                        <select id="calc_target" style="width: 100%; padding: 11px; border-radius: 8px; border: 1px solid #94a3b8; font-size: 0.92rem; background: #fff;">
+                            <option value="girl_child">बेटी / छात्रा (जन्म से 12वीं/डिग्री)</option>
+                            <option value="marriage">कन्या विवाह योग्य (18+ वर्ष)</option>
+                            <option value="widow">निराश्रित / विधवा महिला</option>
+                            <option value="pregnant">गर्भवती महिला (मातृत्व पोषण)</option>
+                            <option value="student">सामान्य छात्र (भर्ती / स्कॉलरशिप)</option>
+                        </select>
                     </div>
-                    <p class="card-summary">वृद्ध माताओं-पिताओं को लाइन में न लगना पड़े, इसके लिए मैं स्वयं आपके घर आकर सत्यापन व आवेदन पूरा करूँगा।</p>
-                    <ul class="card-features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> वृद्धावस्था, विधवा एवं दिव्यांग पेंशन नया आवेदन</li>
-                        <li><i class="fa-solid fa-circle-check"></i> वार्षिक पेंशनर जीवन प्रमाण पत्र (ई-केवाईसी सत्यापन)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> बैंक खाता आधार सीडिंग व भुगतान स्थिति जांच</li>
-                        <li><i class="fa-solid fa-circle-check"></i> बुजुर्गों के सम्मान में नाममात्र ₹50 विजिट शुल्क</li>
-                    </ul>
+
+                    <div>
+                        <label style="display: block; font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; color: #0f172a;">2. परिवार की वार्षिक आय?</label>
+                        <select id="calc_income" style="width: 100%; padding: 11px; border-radius: 8px; border: 1px solid #94a3b8; font-size: 0.92rem; background: #fff;">
+                            <option value="under_2">₹2 लाख प्रति वर्ष से कम</option>
+                            <option value="under_3">₹2 लाख से ₹3 लाख तक</option>
+                            <option value="above_3">₹3 लाख से अधिक</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; color: #0f172a;">3. ई-श्रम / लेबर कार्ड है?</label>
+                        <select id="calc_labor" style="width: 100%; padding: 11px; border-radius: 8px; border: 1px solid #94a3b8; font-size: 0.92rem; background: #fff;">
+                            <option value="yes">हाँ (मजदूर / लेबर कार्ड पंजीकृत है)</option>
+                            <option value="no">नहीं (सामान्य परिवार)</option>
+                        </select>
+                    </div>
                 </div>
-                <a href="https://wa.me/917988807962?text=प्रणाम%20विष्णु%20जी,%20मुझे%20घर%20पर%20पेंशन%20सत्यापन%20हेतु%20बुलाना%20है।" class="btn-card-action btn-saffron-card">
-                    <i class="fa-solid fa-house-chimney-user"></i> घर पर सेवा बुलाएं
-                </a>
+
+                <button onclick="calculateSchemes()" style="width: 100%; background: #0284c7; color: #fff; border: none; padding: 13px; border-radius: 8px; font-weight: 800; font-size: 1.05rem; cursor: pointer; transition: 0.2s;">
+                    <i class="fa-solid fa-calculator"></i> तुरंत पात्र योजनाएं जांचें
+                </button>
+
+                <!-- Result Display Box -->
+                <div id="calc_result" style="display: none; margin-top: 25px; padding: 20px; background: #ffffff; border-radius: 10px; border-left: 5px solid #10b981;">
+                </div>
             </div>
 
-            <!-- Pillar 3: Citizen Services -->
-            <div class="janhit-card pillar-citizen">
-                <div>
-                    <div class="card-top">
-                        <div class="card-icon-title">
-                            <i class="fa-solid fa-address-card" style="color: var(--gov-blue);"></i>
-                            <h3>सामान्य नागरिक प्रमाण पत्र</h3>
-                        </div>
-                        <span class="pill-free" style="background:#e0f2fe; color:var(--gov-blue);">त्वरित सेवा</span>
+            <!-- Rejection Warning Box -->
+            <div style="background: #fff; border: 1px solid #fecaca; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.05);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                    <i class="fa-solid fa-triangle-exclamation" style="color: #dc2626; font-size: 1.6rem;"></i>
+                    <div>
+                        <h3 style="font-size: 1.2rem; color: #991b1b; font-weight: 800;">आवेदन रद्द (Reject) होने से कैसे बचाएं?</h3>
+                        <p style="font-size: 0.85rem; color: #64748b;">सरकारी पोर्टलों पर 70% फॉर्म इन छोटी चूकों के कारण निरस्त हो जाते हैं:</p>
                     </div>
-                    <p class="card-summary">सरकारी योजनाओं एवं प्रमाण पत्रों के लिए आवश्यक दस्तावेजों की ऑनलाइन प्रक्रिया।</p>
-                    <ul class="card-features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> नया पैन कार्ड (आधार ई-केवाईसी द्वारा 2 घंटे में ई-पैन)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> आय, जाति एवं निवास प्रमाण पत्र आवेदन सहायता</li>
-                        <li><i class="fa-solid fa-circle-check"></i> राशन कार्ड पात्रता व यूनिट सूची जांच</li>
-                        <li><i class="fa-solid fa-circle-check"></i> बिजली बिल जांच एवं ऑनलाइन भुगतान</li>
-                    </ul>
                 </div>
-                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20नागरिक%20सेवा%20हेतु%20जानकारी%20चाहिए।" class="btn-card-action btn-blue-card">
-                    <i class="fa-brands fa-whatsapp"></i> नागरिक सेवा हेतु संपर्क करें
-                </a>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; font-size: 0.88rem;">
+                    <div style="background: #fef2f2; padding: 12px 14px; border-radius: 8px; border: 1px solid #fee2e2;">
+                        <strong style="color: #b91c1c;">⚠️ आय प्रमाण-पत्र की वैधता:</strong>
+                        <p style="color: #4b5563; margin-top: 4px;">आय प्रमाण-पत्र 3 वर्ष से अधिक पुराना न हो। कन्या सुमंगला में परिवार की वार्षिक आय ₹3 लाख से कम अनिवार्य है[cite: 9]!</p>
+                    </div>
+                    <div style="background: #fef2f2; padding: 12px 14px; border-radius: 8px; border: 1px solid #fee2e2;">
+                        <strong style="color: #b91c1c;">⚠️ बैंक खाता & नाम मिलान:</strong>
+                        <p style="color: #4b5563; margin-top: 4px;">पहचान पत्र और बैंक पासबुक में नाम व जन्मतिथि की स्पेलिंग अक्षर-ब-अक्षर समान होनी चाहिए[cite: 9, 12]!</p>
+                    </div>
+                    <div style="background: #fef2f2; padding: 12px 14px; border-radius: 8px; border: 1px solid #fee2e2;">
+                        <strong style="color: #b91c1c;">⚠️ आयु सीमा व प्रमाण:</strong>
+                        <p style="color: #4b5563; margin-top: 4px;">सामूहिक विवाह हेतु कन्या की आयु 18+ और वर की 21+ पूर्ण होनी चाहिए[cite: 9]। वैध जन्म प्रमाण पत्र अनिवार्य है[cite: 9]!</p>
+                    </div>
+                </div>
+                <p style="text-align: right; font-size: 0.82rem; color: #047857; margin-top: 12px; font-weight: 700;">
+                    ✔ ई-नंदगांव जन सेवा केंद्र पर हर फॉर्म सबमिट करने से पहले 100% त्रुटि-रहित प्रीव्यू जांचा जाता है।
+                </p>
             </div>
 
-            <!-- Pillar 4: Local Merchant & Business -->
-            <div class="janhit-card pillar-merchant">
-                <div>
-                    <div class="card-top">
-                        <div class="card-icon-title">
-                            <i class="fa-solid fa-store" style="color: var(--gold);"></i>
-                            <h3>स्थानीय व्यापारी मित्र</h3>
-                        </div>
-                        <span class="pill-home" style="background:#fef9c3; color:#854d0e;">डिजिटल नंदगांव</span>
-                    </div>
-                    <p class="card-summary">नंदगांव और आस-पास की दुकानों, कारीगरों और प्रतिष्ठानों को ऑनलाइन सशक्त बनाना।</p>
-                    <ul class="card-features-list">
-                        <li><i class="fa-solid fa-circle-check"></i> सरकारी उद्यम रजिस्ट्रेशन (MSME Certificate)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> मिठाई, किराना व ढाबों के लिए FSSAI फूड लाइसेंस</li>
-                        <li><i class="fa-solid fa-circle-check"></i> दुकान को गूगल मैप्स (Google Maps) पर जोड़ना</li>
-                        <li><i class="fa-solid fa-circle-check"></i> स्थानीय कारोबार के लिए वेबसाइट व डिजिटल प्रमोशन</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20व्यापार%20रजिस्ट्रेशन/गूगल%20मैप्स%20की%20सेवा%20चाहिए।" class="btn-card-action btn-blue-card" style="background: #1e293b;">
-                    <i class="fa-solid fa-briefcase"></i> व्यापार सेवा संपर्क
-                </a>
-            </div>
         </div>
+    </section>
 
-        <!-- 4 Steps Work Flow -->
+    <!-- 4 Steps Work Flow -->
+    <div class="container">
         <div class="process-flow">
             <div style="text-align:center;">
                 <span class="section-badge">सरल व्यवस्था</span>
@@ -922,7 +1123,7 @@
                 </p>
                 <ul class="commitment-list">
                     <li><i class="fa-solid fa-circle-check"></i> किसी भी सरकारी फॉर्म में कोई गुप्त शुल्क नहीं लिया जाएगा।</li>
-                    <li><i class="fa-solid fa-circle-check"></i> आपके दस्तावेजों (आधार, फोटो, पासबुक) की पूर्ण गोपनीयता सुरक्षित रहेगी।</li>
+                    <li><i class="fa-solid fa-circle-check"></i> आपके दस्तावेजों की पूर्ण गोपनीयता और सुरक्षा सुनिश्चित रहेगी।</li>
                     <li><i class="fa-solid fa-circle-check"></i> बुजुर्गों के लिए सेवा सदैव प्राथमिकता पर रहेगी।</li>
                 </ul>
             </div>
@@ -931,20 +1132,21 @@
 
     <!-- Portal Footer -->
     <footer class="portal-footer">
-        <div class="footer-cols">
+        <div class="container footer-cols" style="margin: 0 auto 30px;">
             <div class="footer-col">
                 <h4>ई-नंदगांव जन सेवा केंद्र</h4>
                 <p>
-                    नंदगांव, छाता (मथुरा) के नागरिकों, विद्यार्थियों एवं व्यापारियों को पारदर्शी एवं त्वरित ऑनलाइन सेवाएं प्रदान करने के लिए स्थापित जनहित डिजिटल सेवा केंद्र।
+                    नंदगांव, छाता (मथुरा) के नागरिकों, विद्यार्थियों एवं व्यापारियों को पारदर्शी एवं त्वरित ऑनलाइन सेवाएं प्रदान करने के लिए समर्पित जनहित डिजिटल सेवा केंद्र।
                 </p>
             </div>
             <div class="footer-col">
                 <h4>मुख्य सेवाएं</h4>
                 <ul>
-                    <li><a href="#janhit-pillars">• सरकारी नौकरी ऑनलाइन आवेदन (0%)</a></li>
-                    <li><a href="#janhit-pillars">• बुजुर्ग पेंशन एवं वार्षिक ई-केवाईसी</a></li>
-                    <li><a href="#janhit-pillars">• नया पैन कार्ड & उद्यम रजिस्ट्रेशन</a></li>
-                    <li><a href="#janhit-pillars">• गूगल मैप्स बिज़नेस लिस्टिंग</a></li>
+                    <li><a href="#services-directory">• सरकारी भर्ती ऑनलाइन आवेदन (0%)</a></li>
+                    <li><a href="#services-directory">• EPFO / PF फंड निकासी व e-KYC</a></li>
+                    <li><a href="#services-directory">• बुजुर्ग पेंशन एवं वार्षिक ई-केवाईसी</a></li>
+                    <li><a href="#services-directory">• ड्राइविंग लाइसेंस (LL/DL)</a></li>
+                    <li><a href="#services-directory">• नया पैन कार्ड & उद्यम रजिस्ट्रेशन</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -960,8 +1162,12 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Handler Script -->
+    <!-- All JavaScript Functions -->
     <script>
+        // LIVE APPS SCRIPT WEB APP ENDPOINT
+        const GOOGLE_SHEET_API = "https://script.google.com/macros/s/AKfycbxXdZG5n6nAeTpdUWD8jqGG9QJrEI4bojvQUCECKVq9YbrIeADEpe-zcI6hCRN9wKd43w/exec";
+
+        // 1. Citizen Quick Service WhatsApp Handler
         function handleCitizenSubmit(e) {
             e.preventDefault();
             const name = document.getElementById('citizen_name').value.trim();
@@ -971,6 +1177,186 @@
             const text = `*ई-नंदगांव सेवा अनुरोध*%0A%0A*आवेदक का नाम:* ${encodeURIComponent(name)}%0A*मोबाइल नंबर:* ${encodeURIComponent(phone)}%0A*वांछित सेवा:* ${encodeURIComponent(service)}%0A%0Aकृपया मार्गदर्शन एवं सहायता प्रदान करें।`;
             window.open(`https://wa.me/917988807962?text=${text}`, '_blank');
         }
+
+        // 2. Tab Filter Function
+        function filterServices(category, btnElement) {
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            if (btnElement) {
+                btnElement.classList.add('active');
+            }
+
+            const cards = document.querySelectorAll('.srv-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 3. Icon Mapper (Converts Material/Clean names to FontAwesome classes)
+        function formatIconClass(icon) {
+            if (!icon) return 'fa-solid fa-briefcase';
+            if (icon.startsWith('fa-')) return icon;
+            
+            const mapping = {
+                'briefcase': 'fa-solid fa-briefcase',
+                'fingerprint': 'fa-solid fa-fingerprint',
+                'child_care': 'fa-solid fa-child-reaching',
+                'favorite': 'fa-solid fa-hand-holding-heart',
+                'elderly': 'fa-solid fa-person-dress',
+                'description': 'fa-solid fa-file-lines',
+                'map': 'fa-solid fa-map-location',
+                'directions_car': 'fa-solid fa-car-side',
+                'health_and_safety': 'fa-solid fa-heart-pulse',
+                'school': 'fa-solid fa-user-graduate',
+                'store': 'fa-solid fa-store'
+            };
+            return mapping[icon] || 'fa-solid fa-star';
+        }
+
+        // 4. Live Data Fetcher from Google Sheets
+        async function fetchLiveSheetData() {
+            try {
+                const response = await fetch(GOOGLE_SHEET_API);
+                if (!response.ok) throw new Error("Network response not ok");
+                const data = await response.json();
+
+                // Live Notice Update
+                if (data.notice && data.notice.toString().trim() !== "") {
+                    const noticeMarquee = document.getElementById('live-notice-marquee');
+                    if (noticeMarquee) {
+                        noticeMarquee.innerText = "📢 " + data.notice;
+                    }
+                }
+
+                // Live Services Render
+                if (data.services && Array.isArray(data.services) && data.services.length > 0) {
+                    const container = document.getElementById('services-grid-container');
+                    container.innerHTML = ""; // Clear fallback cards
+
+                    data.services.forEach(srv => {
+                        const cat = (srv.category || 'other').toString().toLowerCase().trim();
+                        const bType = (srv.badge_type || 'discount').toString().toLowerCase().trim();
+                        
+                        let badgeClass = "badge-discount";
+                        let btnClass = "srv-btn";
+
+                        if (bType === "free") {
+                            badgeClass = "badge-free";
+                            btnClass += " btn-green";
+                        } else if (bType === "home") {
+                            badgeClass = "badge-home";
+                            btnClass += " btn-saffron";
+                        }
+
+                        const iconClass = formatIconClass(srv.icon);
+                        const waMsg = srv.wa_text || `नमस्ते विष्णु जी, मुझे ${srv.title} सेवा के बारे में जानकारी चाहिए।`;
+                        const waLink = `https://wa.me/917988807962?text=${encodeURIComponent(waMsg)}`;
+
+                        const cardHtml = `
+                            <div class="srv-card" data-category="${cat}">
+                                <div class="srv-badge ${badgeClass}">${srv.badge || 'उपलब्ध'}</div>
+                                <div class="srv-icon"><i class="${iconClass}"></i></div>
+                                <h3>${srv.title || ''}</h3>
+                                <p>${srv.description || ''}</p>
+                                <div class="srv-pricing">
+                                    <span class="mkt-rate">बाजार: ${srv.mkt_rate || '₹--'}</span>
+                                    <span class="our-rate">हमारा चार्ज: ${srv.our_rate || '₹--'}</span>
+                                </div>
+                                <a href="${waLink}" class="${btnClass}">
+                                    <i class="fa-brands fa-whatsapp"></i> संपर्क करें
+                                </a>
+                            </div>
+                        `;
+                        container.innerHTML += cardHtml;
+                    });
+
+                    // Retain current filter state after injection
+                    const activeBtn = document.querySelector('.tab-btn.active') || document.querySelector('.tab-btn');
+                    if (activeBtn) {
+                        const targetCategory = activeBtn.getAttribute('onclick').match(/'([^']+)'/)[1];
+                        filterServices(targetCategory, activeBtn);
+                    }
+                }
+            } catch (err) {
+                console.warn("Live Google Sheet sync info: using standard offline fallback.", err);
+            }
+        }
+
+        // 5. Scheme Eligibility Calculator
+        function calculateSchemes() {
+            const target = document.getElementById('calc_target').value;
+            const income = document.getElementById('calc_income').value;
+            const labor = document.getElementById('calc_labor').value;
+            const resultBox = document.getElementById('calc_result');
+
+            let schemes = [];
+            let totalBenefit = 0;
+
+            if (target === 'girl_child') {
+                if (income === 'under_2' || income === 'under_3') {
+                    schemes.push("<strong>मुख्यमंत्री कन्या सुमंगला योजना:</strong> ₹25,000 की कुल शिक्षा सहायता राशि[cite: 9]।");
+                    totalBenefit += 25000;
+                    schemes.push("<strong>कन्या विद्या धन योजना:</strong> 12वीं उत्तीर्ण मेधावी छात्राओं को ₹30,000 एकमुश्त[cite: 10]।");
+                    totalBenefit += 30000;
+                }
+                if (labor === 'yes') {
+                    schemes.push("<strong>BOCW श्रमिक बालिका मदद योजना:</strong> पुत्री जन्म पर ₹25,000 नकद/सावधि जमा[cite: 11]।");
+                    totalBenefit += 25000;
+                }
+            } else if (target === 'marriage') {
+                if (income === 'under_2' || income === 'under_3') {
+                    schemes.push("<strong>मुख्यमंत्री सामूहिक विवाह योजना:</strong> ₹1,00,000 का कुल पैकेज (₹60,000 सीधे दुल्हन के खाते में + ₹25,000 उपहार सामान)[cite: 9]।");
+                    totalBenefit += 100000;
+                }
+                if (labor === 'yes') {
+                    schemes.push("<strong>BOCW निर्माण श्रमिक कन्या विवाह सहायता:</strong> ₹55,000 प्रति कन्या शादी अनुदान[cite: 11]।");
+                    totalBenefit += 55000;
+                }
+            } else if (target === 'widow') {
+                if (income === 'under_2') {
+                    schemes.push("<strong>निराश्रित महिला (विधवा) पेंशन:</strong> ₹1,000 प्रतिमाह (वार्षिक ₹12,000) सीधे बैंक खाते में[cite: 12]।");
+                    totalBenefit += 12000;
+                } else {
+                    schemes.push("निराश्रित पेंशन के लिए परिवार की वार्षिक आय ₹2 लाख से कम होना अनिवार्य है[cite: 12]।");
+                }
+            } else if (target === 'pregnant') {
+                schemes.push("<strong>प्रधानमंत्री मातृ वंदना योजना (PMMVY 2.0):</strong> प्रथम शिशु पर ₹5,000 एवं दूसरी संतान बालिका होने पर ₹6,000 पोषण सहायता[cite: 12]।");
+                totalBenefit += 6000;
+                if (labor === 'yes') {
+                    schemes.push("<strong>BOCW मातृत्व हितलाभ:</strong> 3 माह का न्यूनतम वेतन + ₹1,000 चिकित्सा भत्ता[cite: 11]।");
+                    totalBenefit += 20000;
+                }
+            } else if (target === 'student') {
+                schemes.push("<strong>UP छात्रवृत्ति (Scholarship):</strong> ट्यूशन फीस प्रतिपूर्ति व भत्ता (निःशुल्क ऑनलाइन आवेदन)।");
+                schemes.push("<strong>सरकारी भर्ती आवेदन (SSC, Railway, Police):</strong> ई-नंदगांव पर 0% सर्विस फीस पर आवेदन।");
+            }
+
+            let html = `<h4 style="color:#065f46; font-size:1.15rem; margin-bottom:10px;"><i class="fa-solid fa-circle-check"></i> आपके लिए अनुमानित सरकारी सहायता: कुल ₹${totalBenefit.toLocaleString('en-IN')} तक</h4>`;
+            html += '<ul style="padding-left:20px; line-height:1.8; color:#1e293b; font-size:0.95rem;">';
+            schemes.forEach(s => {
+                html += `<li>${s}</li>`;
+            });
+            html += '</ul>';
+            html += `<a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मैंने%20वेबसाइट%20पर%20पात्रता%20चेक%20की%20है।%20मुझे%20आवेदन%20हेतु%20मार्गदर्शन%20चाहिए।" style="display:inline-block; margin-top:14px; background:#10b981; color:#fff; padding:10px 18px; border-radius:6px; font-weight:700; text-decoration:none;">📲 इस योजना का फॉर्म भरवाने हेतु व्हाट्सएप करें</a>`;
+
+            resultBox.innerHTML = html;
+            resultBox.style.display = 'block';
+        }
+
+        // DOM Ready Initializer
+        document.addEventListener('DOMContentLoaded', () => {
+            const defaultBtn = document.querySelector('.tab-btn');
+            if (defaultBtn) {
+                filterServices('all', defaultBtn);
+            }
+            fetchLiveSheetData();
+        });
     </script>
 </body>
 </html>
