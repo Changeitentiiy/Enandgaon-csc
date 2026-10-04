@@ -3,16 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ई-नंदगांव जन सेवा केंद्र | जनहित डिजिटल सेवा पोर्टल</title>
-    <meta name="description" content="ई-नंदगांव जन सेवा केंद्र (मथुरा) - विद्यार्थियों के लिए सभी सरकारी फॉर्म 0% सर्विस चार्ज पर एवं बुजुर्ग माताओं-पिताओं के लिए घर बैठे पेंशन व ई-केवाईसी सेवा।">
-    <meta name="keywords" content="eNandgaon, Nandgaon CSC, Jan Seva Kendra Nandgaon, Sarkari Form Free, Pension KYC Nandgaon Mathura, Vishnu Kumar">
+    <title>ई-नंदगांव जन सेवा केंद्र | नंदगांव, बरसाना एवं छाता डिजिटल सेवा पोर्टल</title>
+    <meta name="description" content="ई-नंदगांव जन सेवा केंद्र (नंदगांव, बरसाना, छाता, कोसी कलां) - विद्यार्थियों हेतु सभी सरकारी फॉर्म 0% फीस पर, बुजुर्ग पेंशन ई-केवाईसी, EPFO PF निकासी, ड्राइविंग लाइसेंस व नागरिक प्रमाण पत्र सेवा।">
+    <meta name="keywords" content="eNandgaon, Jan Seva Kendra Nandgaon, CSC Center Barsana, Cyber Cafe Barsana, Chhata Jan Seva Kendra, Kosi Kalan Cyber Cafe, Pension KYC Barsana, Sarkari Form Free Mathura, Vishnu Kumar Nandgaon">
     <link rel="icon" type="image/png" href="logo.png">
 
+    <!-- Local SEO Geo Meta Tags -->
+    <meta name="geo.region" content="IN-UP">
+    <meta name="geo.placename" content="Nandgaon, Mathura, Uttar Pradesh">
+    <meta name="geo.position" content="27.7127;77.3879">
+    <meta name="ICBM" content="27.7127, 77.3879">
+
     <!-- Open Graph for WhatsApp & Social Sharing -->
-    <meta property="og:title" content="ई-नंदगांव जन सेवा केंद्र - जनहित में डिजिटल पहल">
-    <meta property="og:description" content="छात्रों के लिए सभी सरकारी फॉर्म 0% सर्विस फीस पर। घर बैठे बुजुर्ग पेंशन सेवा।">
+    <meta property="og:title" content="ई-नंदगांव जन सेवा केंद्र - नंदगांव, बरसाना व छाता जनहित सेवा पोर्टल">
+    <meta property="og:description" content="विद्यार्थियों के सभी सरकारी फॉर्म 0% फीस पर। बुजुर्ग पेंशन घर बैठे ई-केवाईसी, PF विथड्रॉल व ड्राइविंग लाइसेंस सहायता।">
     <meta property="og:url" content="https://enandgaon.com">
     <meta property="og:type" content="website">
+
+    <!-- Schema.org Structured Data (Google Search & Maps LocalBusiness Rich Snippet) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ई-नंदगांव जन सेवा केंद्र",
+      "image": "https://enandgaon.com/logo.png",
+      "@id": "https://enandgaon.com",
+      "url": "https://enandgaon.com",
+      "telephone": "+917988807962",
+      "priceRange": "₹0 - ₹150",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "मुख्य बाजार, नंदगांव",
+        "addressLocality": "Nandgaon, Chhata Tehsil",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "281405",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.7127,
+        "longitude": 77.3879
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Nandgaon" },
+        { "@type": "Place", "name": "Barsana" },
+        { "@type": "Place", "name": "Chhata" },
+        { "@type": "Place", "name": "Kosi Kalan" },
+        { "@type": "Place", "name": "Sanket" },
+        { "@type": "Place", "name": "Jav" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    }
+    </script>
 
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -600,12 +649,40 @@
         }
         .commitment-list li i { color: var(--green); }
 
+        /* Local Area Coverage Footprint */
+        .coverage-section {
+            background: var(--white);
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 30px 5%;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .coverage-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .coverage-wrapper h4 {
+            font-size: 1.05rem;
+            color: var(--gov-blue);
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .coverage-wrapper p {
+            font-size: 0.88rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
         /* Portal Footer */
         footer.portal-footer {
             background: var(--gov-dark);
             color: #94a3b8;
             padding: 45px 5% 20px;
-            margin-top: 60px;
         }
         .footer-cols {
             display: grid;
@@ -664,7 +741,7 @@
     <div class="portal-topbar">
         <div class="location">
             <i class="fa-solid fa-location-dot" style="color: var(--saffron);"></i>
-            <span>नंदगांव, विकास खंड-छाता, जनपद-मथुरा (उ.प्र.)</span>
+            <span>नंदगांव, बरसाना, छाता, जनपद-मथुरा (उ.प्र. 281405)</span>
         </div>
         <div class="contact-quick">
             <span>हेल्पलाइन:</span>
@@ -678,7 +755,7 @@
             <img src="logo.png" alt="eNandgaon Logo" class="site-logo">
             <div class="brand-text">
                 <h1>ई-नंदगांव जन सेवा केंद्र</h1>
-                <p>जनहित एवं ग्रामीण डिजिटल सहायता मिशन</p>
+                <p>जनहित एवं ग्रामीण डिजिटल सहायता मिशन (नंदगांव • बरसाना • छाता)</p>
             </div>
         </a>
         <div class="header-cta">
@@ -692,7 +769,7 @@
     <div class="notice-ticker">
         <span class="ticker-badge">सूचना पट</span>
         <marquee id="live-notice-marquee" behavior="scroll" direction="left" scrollamount="6">
-            📢 UP पुलिस, SSC, रेलवे एवं रोजगार मेला आवेदन चालू हैं। बुजुर्ग पेंशन वार्षिक ई-केवाईसी सत्यापन के लिए घर बैठे सेवा उपलब्ध है।
+            📢 UP पुलिस, SSC, रेलवे एवं रोजगार मेला आवेदन चालू हैं। नंदगांव, बरसाना व छाता क्षेत्र में बुजुर्ग पेंशन वार्षिक ई-केवाईसी सत्यापन के लिए घर बैठे सेवा उपलब्ध है।
         </marquee>
     </div>
 
@@ -704,8 +781,9 @@
                     <span class="hero-tag"><i class="fa-solid fa-check-circle"></i> 100% पारदर्शी</span>
                     <span class="hero-tag"><i class="fa-solid fa-hand-holding-heart"></i> जन-सेवा संकल्प</span>
                     <span class="hero-tag"><i class="fa-solid fa-shield-halved"></i> सुरक्षित डेटा</span>
+                    <span class="hero-tag"><i class="fa-solid fa-map-pin"></i> नंदगांव • बरसाना • छाता</span>
                 </div>
-                <h2>गांव का अपना <span>ऑनलाइन जन सेवा केंद्र</span>, अब हर नागरिक की पहुंच में।</h2>
+                <h2>नंदगांव व बरसाना का अपना <span>ऑनलाइन जन सेवा केंद्र</span>, अब हर नागरिक की पहुंच में।</h2>
                 <p class="subheading">
                     छात्रों को सरकारी फॉर्म भरने के लिए साइबर कैफे पर ₹50-₹100 अतिरिक्त खर्च करने की आवश्यकता नहीं है। हमारा सर्विस चार्ज = ₹0। बुजुर्ग माताओं-पिताओं को ब्लॉक जाने की आवश्यकता नहीं, हम घर आकर पेंशन सत्यापन करेंगे।
                 </p>
@@ -970,7 +1048,7 @@
                     <div class="srv-badge badge-discount">50% बचत</div>
                     <div class="srv-icon"><i class="fa-solid fa-address-card"></i></div>
                     <h3>नया पैन कार्ड (e-KYC द्वारा)</h3>
-                    <p>आधार ई-केवाईसी द्वारा 2 घंटे में ई-पैन और 7-10 दिनों में ओरिजिनल कार्ड घर के पते पर।</p>
+                    <p>पहचान पत्र ई-केवाईसी द्वारा 2 घंटे में ई-पैन और 7-10 दिनों में ओरिजिनल कार्ड घर के पते पर।</p>
                     <div class="srv-pricing">
                         <span class="mkt-rate">बाजार: ₹200–₹300</span>
                         <span class="our-rate">हमारा चार्ज: ₹80</span>
@@ -1119,7 +1197,7 @@
             <div class="operator-info-right">
                 <h3>हमारा संकल्प: "पारदर्शिता, सेवा और तकनीक"</h3>
                 <p>
-                    मेरा उद्देश्य नंदगांव के हर नागरिक, छात्र और बुजुर्ग को डिजिटल दुनिया से जोड़ना है ताकि किसी को भी बुनियादी सेवाओं के लिए अधिक पैसे न देने पड़ें और न ही परेशान होना पड़े।
+                    मेरा उद्देश्य नंदगांव, बरसाना और छाता के हर नागरिक, छात्र और बुजुर्ग को डिजिटल दुनिया से जोड़ना है ताकि किसी को भी बुनियादी सेवाओं के लिए अधिक पैसे न देने पड़ें और न ही परेशान होना पड़े।
                 </p>
                 <ul class="commitment-list">
                     <li><i class="fa-solid fa-circle-check"></i> किसी भी सरकारी फॉर्म में कोई गुप्त शुल्क नहीं लिया जाएगा।</li>
@@ -1130,13 +1208,26 @@
         </div>
     </div>
 
+    <!-- Local Area Coverage Footprint (Local SEO Anchor) -->
+    <section class="coverage-section">
+        <div class="coverage-wrapper">
+            <h4>
+                <i class="fa-solid fa-location-crosshairs" style="color: var(--saffron);"></i> 
+                सेवा क्षेत्र (Service Area Coverage - Mathura & Braj)
+            </h4>
+            <p>
+                ई-नंदगांव डिजिटल सेवा केंद्र <strong>नंदगांव (पिन कोड 281405)</strong>, <strong>बरसाना</strong>, <strong>छाता देहात</strong>, <strong>कोसी कलां</strong>, संकेत, जाव, कामां बॉर्डर और आसपास के समस्त ब्रज ग्रामीण क्षेत्रों के नागरिकों व विद्यार्थियों को पारदर्शी ऑनलाइन सेवाएं व घर बैठे पेंशन ई-केवाईसी उपलब्ध कराता है।
+            </p>
+        </div>
+    </section>
+
     <!-- Portal Footer -->
     <footer class="portal-footer">
         <div class="container footer-cols" style="margin: 0 auto 30px;">
             <div class="footer-col">
                 <h4>ई-नंदगांव जन सेवा केंद्र</h4>
                 <p>
-                    नंदगांव, छाता (मथुरा) के नागरिकों, विद्यार्थियों एवं व्यापारियों को पारदर्शी एवं त्वरित ऑनलाइन सेवाएं प्रदान करने के लिए समर्पित जनहित डिजिटल सेवा केंद्र।
+                    नंदगांव, बरसाना एवं छाता (मथुरा) के नागरिकों, विद्यार्थियों एवं व्यापारियों को पारदर्शी एवं त्वरित ऑनलाइन सेवाएं प्रदान करने के लिए समर्पित जनहित डिजिटल सेवा केंद्र।
                 </p>
             </div>
             <div class="footer-col">
@@ -1152,13 +1243,13 @@
             <div class="footer-col">
                 <h4>सम्पर्क सूत्र</h4>
                 <p><strong>संचालक:</strong> विष्णु कुमार</p>
-                <p><strong>स्थान:</strong> नंदगांव, जनपद-मथुरा (उ.प्र.)</p>
+                <p><strong>स्थान:</strong> नंदगांव, बरसाना रोड, जनपद-मथुरा (उ.प्र.)</p>
                 <p><strong>WhatsApp / फोन:</strong> +91 7988807962</p>
                 <p><strong>वेबसाइट:</strong> enandgaon.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ई-नंदगांव जन सेवा केंद्र (enandgaon.com) | जनहित में समर्पित डिजिटल पहल</p>
+            <p>&copy; 2026 ई-नंदगांव जन सेवा केंद्र (enandgaon.com) | जनहित में समर्पित डिजिटल पहल (नंदगांव • बरसाना • छाता)</p>
         </div>
     </footer>
 
