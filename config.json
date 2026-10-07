@@ -1,0 +1,132 @@
+{
+  "operatorName": "विष्णु कुमार",
+  "operatorPhone": "7988807962",
+  "operatorImage": "https://raw.githubusercontent.com/Changeitentiiy/Enandgaon-csc/main/operator.jpg",
+  "whatsappNumber": "917988807962",
+  "services": {
+    "home": [
+      {
+        "id": "form-20",
+        "title": "सरकारी फॉर्म भरवाना",
+        "price": "20",
+        "icon": "fa-file-alt",
+        "description": "सभी सरकारी फॉर्म सही तरीके से भरवाएं।",
+        "buttonText": "फॉर्म भरवाएं"
+      },
+      {
+        "id": "aadhar-pan",
+        "title": "आधार & PAN सहायता",
+        "price": "30",
+        "icon": "fa-id-card",
+        "description": "आधार और PAN से जुड़ी सभी समस्याएं solve करें।",
+        "buttonText": "आधार/PAN अपडेट करें"
+      }
+    ],
+    "banking": [
+      {
+        "id": "zero-balance",
+        "title": "ज़ीरो बैलेंस डिजिटल बैंक खाता",
+        "price": "50",
+        "marketPrice": "100",
+        "icon": "fa-building-columns",
+        "description": "SBI YONO, Kotak 811, AU Small Finance Bank में ऑनलाइन बचत खाता खोलने में सम्पूर्ण सहायता।",
+        "buttonText": "खाता खोलने में मदद लें"
+      },
+      {
+        "id": "loan-file",
+        "title": "मुद्रा / KCC लोन फाइल तैयारी",
+        "price": "100",
+        "marketPrice": "300",
+        "icon": "fa-file-invoice-dollar",
+        "description": "बैंक में जमा करने हेतु लोन आवेदन पत्र, आवश्यक संलग्नक, प्रोजेक्ट रिपोर्ट की सहायता।",
+        "buttonText": "लोन फाइल तैयार कराएं"
+      },
+      {
+        "id": "cibil-score",
+        "title": "सिबिल स्कोर (CIBIL) व क्रेडिट रिपोर्ट",
+        "price": "30",
+        "marketPrice": "100",
+        "icon": "fa-chart-line",
+        "description": "लोन या क्रेडिट कार्ड मिलने में परेशानी? आधिकारिक पोर्टल से सिबिल स्कोर check करवाएं।",
+        "buttonText": "सिबिल स्कोर चेक करें"
+      },
+      {
+        "id": "dbt-seeding",
+        "title": "NPCI / Aadhaar DBT सीडिंग जांच",
+        "price": "20",
+        "marketPrice": "50",
+        "icon": "fa-fingerprint",
+        "description": "क्या आपकी पीएम किसान सम्मान निधि, पेंशन या छात्रवृत्ति बैंक खाते में सही से जुड़ी है?",
+        "buttonText": "DBT स्टेटस चेक करें"
+      }
+    ],
+    "business": [
+      {
+        "id": "gmaps-listing",
+        "title": "गूगल मैप्स पर दुकान लिस्टिंग",
+        "price": "150",
+        "marketPrice": "500",
+        "icon": "fa-location-dot",
+        "description": "अपनी दुकान को Google Maps व Search पर दर्ज और वेरीफाई करवाएं।",
+        "buttonText": "गूगल मैप्स पर लाएं"
+      },
+      {
+        "id": "msme-registration",
+        "title": "उद्यम (MSME) सरकारी रजिस्ट्रेशन",
+        "price": "100",
+        "marketPrice": "300",
+        "icon": "fa-certificate",
+        "description": "सरकारी उद्योग आधार प्रमाण पत्र प्राप्त करें।",
+        "buttonText": "MSME सर्टिफिकेट बनवाएं"
+      },
+      {
+        "id": "qr-code",
+        "title": "मर्चेंट QR कोड व साउंडबॉक्स सहायता",
+        "price": "50",
+        "marketPrice": "100",
+        "icon": "fa-qrcode",
+        "description": "दुकान के लिए PhonePe, Paytm या GPay Business QR कोड एक्टिवेट करवाएं।",
+        "buttonText": "QR कोड सेटअप कराएं"
+      },
+      {
+        "id": "digital-billing",
+        "title": "डिजिटल बिल व बहीखाता सेटअप",
+        "price": "50",
+        "marketPrice": "150",
+        "icon": "fa-file-invoice",
+        "description": "दुकान के नाम से कस्टम बिल/इनवॉइस फॉर्मेट और KhataBook/Vyapar ऐप का सेटअप।",
+        "buttonText": "डिजिटल खाता चालू करें"
+      }
+    ],
+    "digital": [
+      {
+        "id": "website",
+        "title": "व्यावसायिक वेबसाइट",
+        "icon": "fa-laptop-code",
+        "description": "दुकान, स्कूल, डेयरी या संस्थान के लिए मोबाइल-फ्रेंडली वेबसाइट।",
+        "buttonText": "अभी पूछें"
+      },
+      {
+        "id": "landing-page",
+        "title": "लैंडिंग पेज",
+        "icon": "fa-file-code",
+        "description": "उत्पाद, कोचिंग या विशेष ऑफर बेचने हेतु 1-पेज सेल्स वेबसाइट।",
+        "buttonText": "अभी पूछें"
+      },
+      {
+        "id": "mobile-app",
+        "title": "मोबाइल / वेब ऐप",
+        "icon": "fa-mobile-screen-button",
+        "description": "हिसाब-किताब, ऑर्डर मैनेजमेंट या छात्र पोर्टल के लिए डिजिटल समाधान।",
+        "buttonText": "अभी पूछें"
+      },
+      {
+        "id": "digital-ads",
+        "title": "गूगल/सोशल मीडिया एड्स",
+        "icon": "fa-bullhorn",
+        "description": "लोकल एरिया में दुकान का प्रचार और नए ग्राहकों तक पहुँच बनाएं।",
+        "buttonText": "अभी पूछें"
+      }
+    ]
+  }
+}
