@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | ई-नंदगांव जन सेवा केंद्र</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --gov-blue: #0b2545;
+      --gov-dark: #06152b;
+      --saffron: #f97316;
+      --green: #15803d;
+      --wa-green: #25d366;
+      --gold: #eab308;
+      --gray-bg: #f8fafc;
+      --text-dark: #0f172a;
+      --text-gray: #475569;
+      --border: #dbe3ef;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif; }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #eef6ff 0%, #f8fafc 100%);
+      color: var(--text-dark);
+    }
+
+    .admin-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .admin-topbar {
+      background: var(--gov-dark);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .admin-topbar .brand {
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logout-btn {
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .admin-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: 32px auto;
+      padding: 0 18px 40px;
+    }
+
+    .tab-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .tab-btn {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: var(--gov-blue);
+      color: white;
+      border-color: var(--gov-blue);
+    }
+
+    .panel {
+      display: none;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      padding: 24px;
+    }
+    .panel.active {
+      display: block;
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      color: var(--gov-blue);
+      font-size: 1.4rem;
+    }
+
+    .notice-box, .service-form, .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    textarea, input, select {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .primary-btn {
+      border: none;
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: white;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .secondary-btn {
+      border: none;
+      background: linear-gradient(135deg, #15803d, #166534);
+      color: white;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      background: white;
+    }
+    th, td {
+      border-bottom: 1px solid #edf2f7;
+      text-align: left;
+      padding: 12px 10px;
+      vertical-align: middle;
+      font-size: 0.88rem;
+    }
+    th {
+      background: #f8fafc;
+      color: var(--gov-blue);
+      font-weight: 800;
+    }
+    .mini-input {
+      width: 90px;
+      padding: 8px 10px;
+      min-width: 80px;
+      border-radius: 8px;
+    }
+    .inline-action {
+      margin-top: 12px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .login-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 21, 43, 0.72);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 999;
+    }
+
+    .login-card {
+      width: min(420px, 100%);
+      background: white;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+      padding: 24px;
+    }
+    .login-card h1 {
+      margin: 0 0 8px;
+      color: var(--gov-blue);
+      font-size: 1.6rem;
+    }
+    .login-card p {
+      margin: 0 0 18px;
+      color: var(--text-gray);
+      font-size: 0.92rem;
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 700px) {
+      .admin-topbar { flex-direction: column; align-items: flex-start; }
+      .toolbar { width: 100%; justify-content: space-between; }
+      .panel { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-shell">
+    <div class="admin-topbar">
+      <div class="brand">ई-नंदगांव CMS Dashboard</div>
+      <div class="toolbar">
+        <span id="currentUserLabel">गेस्ट</span>
+        <button class="logout-btn" id="logoutBtn">लॉगआउट</button>
+      </div>
+    </div>
+
+    <main class="admin-content">
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="noticeTab">Notice Manager</button>
+        <button class="tab-btn" data-tab="ratesTab">Services Rate Editor</button>
+        <button class="tab-btn" data-tab="addTab">Add Service</button>
+      </div>
+
+      <section class="panel active" id="noticeTab">
+        <h2>सूचना पट अपडेट</h2>
+        <div class="notice-box">
+          <textarea id="noticeEditor" placeholder="Current notice text...">📢 छात्र सरकारी फॉर्म मात्र ₹20 में • बुजुर्गों हेतु घर बैठे पेंशन ई-केवाईसी • नए रोजगार अपडेट • त्वरित सहायता</textarea>
+          <button class="primary-btn" id="saveNoticeBtn">नोटिस अपडेट करें</button>
+        </div>
+      </section>
+
+      <section class="panel" id="ratesTab">
+        <h2>सेवा दर एडिटर</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Category</th>
+                <th>Our Rate</th>
+                <th>Market Rate</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="ratesTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="addTab">
+        <h2>नई सेवा जोड़ें</h2>
+        <form class="service-form" id="addServiceForm">
+          <input type="text" name="page" value="csc" placeholder="page" required />
+          <input type="text" name="category" placeholder="category" required />
+          <input type="text" name="service_title_hi" placeholder="service_title_hi" required />
+          <input type="number" name="our_rate" placeholder="our_rate" required />
+          <input type="number" name="market_rate" placeholder="market_rate" required />
+          <input type="text" name="badge" placeholder="badge" />
+          <textarea name="description" placeholder="description"></textarea>
+          <button type="submit" class="secondary-btn">नई सेवा जोड़ें</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div class="login-modal" id="loginModal">
+    <div class="login-card">
+      <h1>Admin Login</h1>
+      <p>सुरक्षित प्रवेश के लिए ई-नंदगांव CMS लॉगिन करें।</p>
+      <form class="login-form" id="loginForm">
+        <input type="text" id="username" placeholder="Username" value="admin" required />
+        <input type="password" id="password" placeholder="Password" value="enandgaon@2026" required />
+        <button type="submit" class="primary-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const GOOGLE_SHEET_API = "https://script.google.com/macros/s/AKfycbxXdZG5n6nAeTpdUWD8jqGG9QJrEI4bojvQUCECKVq9YbrIeADEpe-zcI6hCRN9wKd43w/exec";
+
+    function isAdminLoggedIn() {
+      return sessionStorage.getItem('enandgaonAdminAuth') === 'true';
+    }
+
+    function setLoggedInState(flag, username = 'admin') {
+      sessionStorage.setItem('enandgaonAdminAuth', flag ? 'true' : 'false');
+      sessionStorage.setItem('enandgaonAdminUser', flag ? username : '');
+      const loginModal = document.getElementById('loginModal');
+      if (loginModal) loginModal.classList.toggle('hidden', flag);
+      const userLabel = document.getElementById('currentUserLabel');
+      if (userLabel) userLabel.textContent = flag ? username : 'गेस्ट';
+    }
+
+    async function adminLoginRequest(username, password) {
+      const payload = {
+        action: 'adminLogin',
+        username,
+        password
+      };
+
+      try {
+        const res = await fetch(GOOGLE_SHEET_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error('Apps Script login failed');
+        const data = await res.json();
+        if (data && data.success) return true;
+      } catch (error) {
+        console.warn('Admin login API unavailable. Using fallback auth.', error);
+      }
+
+      return username === 'admin' && password === 'enandgaon@2026';
+    }
+
+    async function loadNotice() {
+      try {
+        const response = await fetch(`${GOOGLE_SHEET_API}?page=csc`);
+        const data = await response.json();
+        if (data && data.notice) {
+          document.getElementById('noticeEditor').value = data.notice;
+        }
+      } catch (error) {
+        console.warn('Unable to load notice from sheet', error);
+      }
+    }
+
+    async function loadRateTable() {
+      try {
+        const response = await fetch(`${GOOGLE_SHEET_API}?page=csc`);
+        const data = await response.json();
+        const services = Array.isArray(data?.services) ? data.services : [];
+        const tbody = document.getElementById('ratesTableBody');
+        if (!tbody) return;
+
+        if (!services.length) {
+          tbody.innerHTML = '<tr><td colspan="5">No services found.</td></tr>';
+          return;
+        }
+
+        tbody.innerHTML = services.map((service) => `
+          <tr>
+            <td>${service.service_title_hi || service.title || '—'}</td>
+            <td>${service.category || 'csc'}</td>
+            <td><input class="mini-input" type="number" value="${service.our_rate || 0}" data-id="${service.id || service.service_title_hi}" data-field="our_rate"></td>
+            <td><input class="mini-input" type="number" value="${service.market_rate || 0}" data-id="${service.id || service.service_title_hi}" data-field="market_rate"></td>
+            <td><button class="secondary-btn save-row-btn" data-id="${service.id || service.service_title_hi}">सेव</button></td>
+          </tr>
+        `).join('');
+      } catch (error) {
+        console.warn('Unable to load services table', error);
+      }
+    }
+
+    async function updateNotice() {
+      const notice = document.getElementById('noticeEditor').value.trim();
+      try {
+        const res = await fetch(GOOGLE_SHEET_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'updateNotice', notice })
+        });
+        const data = await res.json();
+        if (data && data.success) {
+          alert('Notice updated successfully.');
+        } else {
+          alert('Notice update failed.');
+        }
+      } catch (error) {
+        console.warn('Notice update request failed', error);
+        alert('Notice update failed. Please retry.');
+      }
+    }
+
+    async function updateServiceRow(id, field, value) {
+      try {
+        const res = await fetch(GOOGLE_SHEET_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'updateService', id, field, value })
+        });
+        const data = await res.json();
+        return data && data.success;
+      } catch (error) {
+        console.warn('Row update failed', error);
+        return false;
+      }
+    }
+
+    function bindTabs() {
+      const buttons = document.querySelectorAll('.tab-btn');
+      const panels = document.querySelectorAll('.panel');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const activeTab = button.dataset.tab;
+          buttons.forEach(btn => btn.classList.toggle('active', btn === button));
+          panels.forEach(panel => panel.classList.toggle('active', panel.id === activeTab));
+        });
+      });
+    }
+
+    function bindServiceSaveButtons() {
+      document.querySelectorAll('.save-row-btn').forEach(button => {
+        button.addEventListener('click', async function () {
+          const rowId = this.dataset.id;
+          const row = this.closest('tr');
+          const ourRateInput = row.querySelector('[data-field="our_rate"]');
+          const marketRateInput = row.querySelector('[data-field="market_rate"]');
+
+          const successOur = await updateServiceRow(rowId, 'our_rate', ourRateInput.value);
+          const successMarket = await updateServiceRow(rowId, 'market_rate', marketRateInput.value);
+
+          if (successOur || successMarket) {
+            alert('Service updated successfully.');
+          } else {
+            alert('Service update failed.');
+          }
+        });
+      });
+    }
+
+    function bindAddServiceForm() {
+      document.getElementById('addServiceForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const payload = {
+          action: 'addService',
+          page: formData.get('page'),
+          category: formData.get('category'),
+          service_title_hi: formData.get('service_title_hi'),
+          our_rate: formData.get('our_rate'),
+          market_rate: formData.get('market_rate'),
+          badge: formData.get('badge') || '',
+          description: formData.get('description') || ''
+        };
+
+        try {
+          const res = await fetch(GOOGLE_SHEET_API, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+          if (data && data.success) {
+            alert('New service added successfully.');
+            this.reset();
+            this.querySelector('[name="page"]').value = 'csc';
+            await loadRateTable();
+          } else {
+            alert('Add service failed.');
+          }
+        } catch (error) {
+          console.warn('Add service request failed', error);
+          alert('Add service failed.');
+        }
+      });
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const valid = await adminLoginRequest(username, password);
+      if (valid) {
+        setLoggedInState(true, username);
+        await loadNotice();
+        await loadRateTable();
+      } else {
+        alert('Invalid credentials.');
+      }
+    });
+
+    document.getElementById('saveNoticeBtn').addEventListener('click', updateNotice);
+    document.getElementById('logoutBtn').addEventListener('click', () => setLoggedInState(false));
+
+    bindTabs();
+    bindAddServiceForm();
+
+    if (isAdminLoggedIn()) {
+      setLoggedInState(true, sessionStorage.getItem('enandgaonAdminUser') || 'admin');
+      loadNotice();
+      loadRateTable();
+    } else {
+      setLoggedInState(false);
+    }
+
+    document.getElementById('loginModal').classList.toggle('hidden', isAdminLoggedIn());
+    if (isAdminLoggedIn()) {
+      loadRateTable();
+    }
+  </script>
+</body>
+</html>
+
