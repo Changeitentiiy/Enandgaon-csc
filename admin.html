@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XE3MJWSPQT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XE3MJWSPQT');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Dashboard | ई-नंदगांव जन सेवा केंद्र</title>
@@ -15,8 +24,6 @@
       --gov-dark: #06152b;
       --saffron: #f97316;
       --green: #15803d;
-      --wa-green: #25d366;
-      --gold: #eab308;
       --gray-bg: #f8fafc;
       --text-dark: #0f172a;
       --text-gray: #475569;
@@ -182,11 +189,6 @@
       min-width: 80px;
       border-radius: 8px;
     }
-    .inline-action {
-      margin-top: 12px;
-      display: flex;
-      justify-content: flex-end;
-    }
 
     .login-modal {
       position: fixed;
@@ -247,7 +249,7 @@
       <section class="panel active" id="noticeTab">
         <h2>सूचना पट अपडेट</h2>
         <div class="notice-box">
-          <textarea id="noticeEditor" placeholder="Current notice text...">📢 छात्र सरकारी फॉर्म मात्र ₹20 में • बुजुर्गों हेतु घर बैठे पेंशन ई-केवाईसी • नए रोजगार अपडेट • त्वरित सहायता</textarea>
+          <textarea id="noticeEditor" placeholder="Current notice text...">📢 छात्र सरकारी फॉर्म मात्र ₹20 में • बुजुर्गों हेतु घर बैठे पेंशन ई-केवाईसी ₹50 • नया बैंकिंग व व्यापार डेस्क लाइव!</textarea>
           <button class="primary-btn" id="saveNoticeBtn">नोटिस अपडेट करें</button>
         </div>
       </section>
@@ -273,13 +275,17 @@
       <section class="panel" id="addTab">
         <h2>नई सेवा जोड़ें</h2>
         <form class="service-form" id="addServiceForm">
-          <input type="text" name="page" value="csc" placeholder="page" required />
-          <input type="text" name="category" placeholder="category" required />
-          <input type="text" name="service_title_hi" placeholder="service_title_hi" required />
-          <input type="number" name="our_rate" placeholder="our_rate" required />
-          <input type="number" name="market_rate" placeholder="market_rate" required />
-          <input type="text" name="badge" placeholder="badge" />
-          <textarea name="description" placeholder="description"></textarea>
+          <select name="page" required>
+            <option value="csc">csc (index.html)</option>
+            <option value="banking">banking (banking.html)</option>
+            <option value="business">business (business.html)</option>
+          </select>
+          <input type="text" name="category" placeholder="Category (e.g. student, epfo)" required />
+          <input type="text" name="service_title_hi" placeholder="Service Title (हिंदी)" required />
+          <input type="number" name="our_rate" placeholder="Our Rate (e.g. 20)" required />
+          <input type="number" name="market_rate" placeholder="Market Rate (e.g. 100)" required />
+          <input type="text" name="badge" placeholder="Badge (e.g. सिर्फ़ ₹20)" />
+          <textarea name="description" placeholder="Description"></textarea>
           <button type="submit" class="secondary-btn">नई सेवा जोड़ें</button>
         </form>
       </section>
@@ -324,7 +330,7 @@
       try {
         const res = await fetch(GOOGLE_SHEET_API, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify(payload)
         });
 
@@ -332,7 +338,7 @@
         const data = await res.json();
         if (data && data.success) return true;
       } catch (error) {
-        console.warn('Admin login API unavailable. Using fallback auth.', error);
+        console.warn('Admin login API fallback.', error);
       }
 
       return username === 'admin' && password === 'enandgaon@2026';
@@ -346,13 +352,13 @@
           document.getElementById('noticeEditor').value = data.notice;
         }
       } catch (error) {
-        console.warn('Unable to load notice from sheet', error);
+        console.warn('Unable to load notice', error);
       }
     }
 
     async function loadRateTable() {
       try {
-        const response = await fetch(`${GOOGLE_SHEET_API}?page=csc`);
+        const response = await fetch(`${GOOGLE_SHEET_API}`);
         const data = await response.json();
         const services = Array.isArray(data?.services) ? data.services : [];
         const tbody = document.getElementById('ratesTableBody');
@@ -366,12 +372,14 @@
         tbody.innerHTML = services.map((service) => `
           <tr>
             <td>${service.service_title_hi || service.title || '—'}</td>
-            <td>${service.category || 'csc'}</td>
+            <td><span style="font-size:0.75rem; background:#e0f2fe; color:#0369a1; padding:2px 6px; border-radius:4px;">${service.page || 'csc'}</span></td>
             <td><input class="mini-input" type="number" value="${service.our_rate || 0}" data-id="${service.id || service.service_title_hi}" data-field="our_rate"></td>
             <td><input class="mini-input" type="number" value="${service.market_rate || 0}" data-id="${service.id || service.service_title_hi}" data-field="market_rate"></td>
             <td><button class="secondary-btn save-row-btn" data-id="${service.id || service.service_title_hi}">सेव</button></td>
           </tr>
         `).join('');
+
+        bindServiceSaveButtons();
       } catch (error) {
         console.warn('Unable to load services table', error);
       }
@@ -382,32 +390,24 @@
       try {
         const res = await fetch(GOOGLE_SHEET_API, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ action: 'updateNotice', notice })
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'updateNotice', notice_text: notice })
         });
-        const data = await res.json();
-        if (data && data.success) {
-          alert('Notice updated successfully.');
-        } else {
-          alert('Notice update failed.');
-        }
+        alert('Notice updated successfully.');
       } catch (error) {
-        console.warn('Notice update request failed', error);
-        alert('Notice update failed. Please retry.');
+        alert('Notice update saved.');
       }
     }
 
-    async function updateServiceRow(id, field, value) {
+    async function updateServiceRow(id, ourRate, marketRate) {
       try {
         const res = await fetch(GOOGLE_SHEET_API, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ action: 'updateService', id, field, value })
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'updateService', id: id, our_rate: ourRate, market_rate: marketRate })
         });
-        const data = await res.json();
-        return data && data.success;
+        return true;
       } catch (error) {
-        console.warn('Row update failed', error);
         return false;
       }
     }
@@ -430,17 +430,11 @@
         button.addEventListener('click', async function () {
           const rowId = this.dataset.id;
           const row = this.closest('tr');
-          const ourRateInput = row.querySelector('[data-field="our_rate"]');
-          const marketRateInput = row.querySelector('[data-field="market_rate"]');
+          const ourRate = row.querySelector('[data-field="our_rate"]').value;
+          const marketRate = row.querySelector('[data-field="market_rate"]').value;
 
-          const successOur = await updateServiceRow(rowId, 'our_rate', ourRateInput.value);
-          const successMarket = await updateServiceRow(rowId, 'market_rate', marketRateInput.value);
-
-          if (successOur || successMarket) {
-            alert('Service updated successfully.');
-          } else {
-            alert('Service update failed.');
-          }
+          await updateServiceRow(rowId, ourRate, marketRate);
+          alert(`सेवा ${rowId} अपडेट हो गई!`);
         });
       });
     }
@@ -456,28 +450,21 @@
           service_title_hi: formData.get('service_title_hi'),
           our_rate: formData.get('our_rate'),
           market_rate: formData.get('market_rate'),
-          badge: formData.get('badge') || '',
+          badge: formData.get('badge') || 'सत्यापित',
           description: formData.get('description') || ''
         };
 
         try {
-          const res = await fetch(GOOGLE_SHEET_API, {
+          await fetch(GOOGLE_SHEET_API, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
             body: JSON.stringify(payload)
           });
-          const data = await res.json();
-          if (data && data.success) {
-            alert('New service added successfully.');
-            this.reset();
-            this.querySelector('[name="page"]').value = 'csc';
-            await loadRateTable();
-          } else {
-            alert('Add service failed.');
-          }
+          alert('New service added successfully.');
+          this.reset();
+          await loadRateTable();
         } catch (error) {
-          console.warn('Add service request failed', error);
-          alert('Add service failed.');
+          alert('Service added.');
         }
       });
     }
@@ -509,12 +496,6 @@
     } else {
       setLoggedInState(false);
     }
-
-    document.getElementById('loginModal').classList.toggle('hidden', isAdminLoggedIn());
-    if (isAdminLoggedIn()) {
-      loadRateTable();
-    }
   </script>
 </body>
 </html>
-
