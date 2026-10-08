@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XE3MJWSPQT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XE3MJWSPQT');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ई-नंदगांव जन सेवा केंद्र | नंदगांव, बरसाना, गिडोह, बदनगढ़, संकेत, जाव, महराना, छाता</title>
-    <meta name="description" content="ई-नंदगांव जन सेवा केंद्र - ग्रामीण परिवारों के लिए सरकारी फॉर्म, बैंकिंग, व्यापार और डिजिटल सहायता।">
+    <meta name="description" content="ई-नंदगांव जन सेवा केंद्र - छात्र सरकारी फॉर्म मात्र ₹20, घर बैठे बुजुर्ग पेंशन ई-केवाईसी ₹50, EPFO PF निकासी एवं पारदर्शी डिजिटल सहायता।">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -159,16 +168,6 @@
             gap: 6px;
             transition: 0.2s;
         }
-        .op-avatar-img {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #eff6ff;
-            margin: 0 auto 10px;
-            display: block;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
         .btn-grp:hover { background: #0369a1; }
         .btn-call {
             background: var(--wa-green);
@@ -185,6 +184,17 @@
             transition: 0.2s;
         }
         .btn-call:hover { background: #1ebd5a; }
+
+        .op-avatar-img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #eff6ff;
+            margin: 0 auto 10px;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
         .notice-ticker {
             background: #fffbeb;
@@ -402,23 +412,6 @@
         .market-rate-col { color: #dc2626; font-weight: 600; text-decoration: line-through; }
         .enandgaon-rate-col { color: var(--green); font-weight: 800; }
 
-        .ai-search-wrapper {
-            background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
-            border: 2px dashed #0284c7;
-            border-radius: 14px;
-            padding: 24px;
-            margin-bottom: 35px;
-        }
-        .ai-result-snapshot {
-            display: none;
-            background: #ffffff;
-            border: 1px solid #bfdbfe;
-            border-radius: 10px;
-            padding: 18px;
-            margin-top: 18px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-        }
-
         .container {
             max-width: 1200px;
             margin: 40px auto;
@@ -443,35 +436,6 @@
             font-size: 2rem;
             color: var(--gov-blue);
             font-weight: 800;
-        }
-
-        .service-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        .tab-btn {
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
-            color: #475569;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.86rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .tab-btn:hover { background: #f1f5f9; color: var(--gov-blue); }
-        .tab-btn.active {
-            background: var(--gov-blue) !important;
-            color: #ffffff !important;
-            border-color: var(--gov-blue) !important;
-            box-shadow: 0 4px 12px rgba(11, 37, 69, 0.25);
         }
 
         .services-list-grid {
@@ -562,89 +526,6 @@
         .srv-btn.btn-saffron { background: var(--saffron); }
         .srv-btn.btn-saffron:hover { background: #ea580c; }
 
-        .suggestion-box-card {
-            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
-            border: 2px dashed #0284c7;
-            border-radius: 14px;
-            padding: 28px;
-            margin-top: 35px;
-            display: grid;
-            grid-template-columns: 1.1fr 1.3fr;
-            gap: 25px;
-            align-items: center;
-        }
-        .suggestion-box-card h3 {
-            font-size: 1.3rem;
-            color: var(--gov-blue);
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-        .sugg-form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        .sugg-form-grid input, .sugg-form-grid textarea {
-            width: 100%;
-            padding: 9px 11px;
-            border: 1px solid #94a3b8;
-            border-radius: 6px;
-            font-size: 0.88rem;
-            background: #ffffff;
-            outline: none;
-        }
-        .sugg-form-grid textarea {
-            grid-column: span 2;
-            height: 65px;
-            resize: vertical;
-        }
-        .btn-send-sugg {
-            grid-column: span 2;
-            background: #0284c7;
-            color: var(--white);
-            border: none;
-            padding: 10px;
-            border-radius: 6px;
-            font-weight: 800;
-            font-size: 0.92rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: 0.2s;
-        }
-        .btn-send-sugg:hover { background: #0369a1; }
-
-        .process-flow {
-            background: var(--white);
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 32px 20px;
-            margin-top: 45px;
-        }
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-            margin-top: 22px;
-            text-align: center;
-        }
-        .step-circle {
-            width: 44px;
-            height: 44px;
-            margin: 0 auto 10px;
-            background: #eff6ff;
-            color: var(--gov-blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.1rem;
-            border: 2px solid #bfdbfe;
-        }
-
         .operator-section {
             background: linear-gradient(135deg, #f8fafc, #edf2f7);
             border-radius: 12px;
@@ -665,8 +546,8 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.04);
         }
         .op-avatar {
-            width: 65px;
-            height: 65px;
+            width: 75px;
+            height: 75px;
             border-radius: 50%;
             background: var(--gov-blue);
             color: var(--gold);
@@ -675,31 +556,6 @@
             justify-content: center;
             font-size: 1.8rem;
             margin: 0 auto 10px;
-        }
-
-        .coverage-section {
-            background: var(--white);
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 32px 5%;
-            margin-top: 50px;
-            text-align: center;
-        }
-        .coverage-tags {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 7px;
-            margin-top: 10px;
-        }
-        .cov-pill {
-            background: #f1f5f9;
-            color: var(--gov-blue);
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 4px 11px;
-            border-radius: 50px;
-            border: 1px solid #cbd5e1;
         }
 
         footer.portal-footer {
@@ -730,13 +586,18 @@
             font-size: 0.8rem;
         }
 
+        /* Compact Mobile View */
         @media (max-width: 900px) {
             .portal-topbar { padding: 4px 12px; font-size: 0.72rem; }
-            header.main-header { padding: 6px 12px; flex-direction: row wrap; gap: 6px; }
+            .portal-topbar .location { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 65%; }
+            header.main-header { padding: 6px 12px; flex-direction: row; flex-wrap: wrap; gap: 6px; }
+            .brand { gap: 8px; }
             .site-logo, .brand-emblem-badge { height: 34px; }
-            .brand-text h1 { font-size: 1.05rem; }
+            .brand-emblem-badge { min-width: 34px; font-size: 1rem; }
+            .brand-text h1 { font-size: 1.05rem; line-height: 1.1; }
             .brand-text p { display: none; }
-            .btn-grp, .btn-call { padding: 5px 10px; font-size: 0.75rem; }
+            .header-cta { width: auto; display: flex; gap: 5px; }
+            .btn-grp, .btn-call { padding: 5px 10px; font-size: 0.75rem; border-radius: 4px; }
             .nav-links {
                 width: 100%;
                 display: flex;
@@ -745,21 +606,19 @@
                 margin-top: 2px;
                 border-top: 1px solid #f1f5f9;
             }
+            .nav-links a { padding: 4px 8px; font-size: 0.78rem; }
+            .notice-ticker { padding: 4px 12px; font-size: 0.8rem; }
+            .vip-group-banner { padding: 6px 12px; font-size: 0.76rem; flex-direction: column; gap: 6px; text-align: center; }
             .janhit-hero { padding: 24px 12px; }
             .hero-left h2 { font-size: 1.5rem; }
-            .hero-wrapper, .operator-section, .process-grid, .footer-cols, .suggestion-box-card { grid-template-columns: 1fr; }
-            .sugg-form-grid { grid-template-columns: 1fr; }
-            .sugg-form-grid textarea, .btn-send-sugg { grid-column: span 1; }
-            .transparency-section { margin-top: 15px; }
+            .hero-wrapper, .operator-section, .footer-cols { grid-template-columns: 1fr; }
+            .transparency-section { margin-top: 15px; padding: 0 12px; }
             .compare-grid { grid-template-columns: 1.2fr 1fr 1fr; font-size: 0.8rem; }
-            .header-cta { width: 100%; justify-content: center; }
         }
     </style>
 </head>
 <body>
-
     <div class="tricolor-strip"></div>
-
     <div class="sticky-nav-wrapper">
         <div class="portal-topbar">
             <div class="location">
@@ -784,6 +643,7 @@
                 </div>
             </a>
 
+            <!-- Hidden Admin Button -->
             <nav class="nav-links">
                 <a href="index.html" class="active">नागरिक सेवाएं</a>
                 <a href="banking.html">बैंकिंग सहायता</a>
@@ -792,7 +652,7 @@
 
             <div class="header-cta">
                 <a href="https://chat.whatsapp.com/KcJkcWggfkF2aQM4Dce6CG" target="_blank" class="btn-grp">
-                    <i class="fa-solid fa-bell"></i> जॉब अलर्ट ग्रुप
+                    <i class="fa-solid fa-bell"></i> जॉब अलर्ट
                 </a>
                 <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सहायता%20चाहिए।" target="_blank" class="btn-call">
                     <i class="fa-brands fa-whatsapp"></i> व्हाट्सएप सहायता
@@ -803,13 +663,13 @@
 
     <div class="notice-ticker">
         <span class="ticker-badge">सूचना पट</span>
-        <marquee id="live-notice-marquee" behavior="scroll" direction="left" scrollamount="6">📢 छात्र सरकारी फॉर्म मात्र ₹20 में • बुजुर्गों हेतु घर बैठे पेंशन ई-केवाईसी • नए रोजगार अपडेट • त्वरित सहायता</marquee>
+        <marquee id="live-notice-marquee" behavior="scroll" direction="left" scrollamount="6">📢 छात्र सरकारी फॉर्म मात्र ₹20 में • बुजुर्गों हेतु घर बैठे पेंशन ई-केवाईसी ₹50 • नया बैंकिंग व व्यापार डेस्क लाइव!</marquee>
     </div>
 
     <div class="vip-group-banner">
         <div>
             <i class="fa-solid fa-bullhorn" style="color: var(--gold); margin-right: 6px;"></i>
-            <strong>ई-नंदगांव आधिकारिक जॉब अलर्ट ग्रुप:</strong> गाँव के लिए बिना विज्ञापन, ताज़ा नोटिफिकेशन
+            <strong>ई-नंदगांव आधिकारिक जॉब अलर्ट ग्रुप:</strong> बिना किसी विज्ञापन के गाँव के युवाओं के लिए सीधी भर्ती व योजना सूचना।
         </div>
         <a href="https://chat.whatsapp.com/KcJkcWggfkF2aQM4Dce6CG" target="_blank">
             <i class="fa-brands fa-whatsapp"></i> ग्रुप से जुड़ें
@@ -819,125 +679,127 @@
     <section class="janhit-hero">
         <div class="hero-wrapper">
             <div class="hero-left">
-                <h2>ग्रामीण परिवारों के लिए <span>सही समाधान</span>, सही समय पर</h2>
-                <p class="subheading">नागरिक सेवा, सरकारी फॉर्म, बैंकिंग, रोजगार अपडेट, pension, PAN, Aadhaar, निबंध, रोजगार, और स्थानीय negosyo Growth — सब एक जगह पर।</p>
                 <div class="hero-badges-row">
-                    <span class="hero-tag"><i class="fa-solid fa-check"></i> घर बैठे सेवा</span>
-                    <span class="hero-tag"><i class="fa-solid fa-check"></i> पंजीकृत सहयोग</span>
-                    <span class="hero-tag"><i class="fa-solid fa-check"></i> भरोसेमंद मार्गदर्शन</span>
+                    <span class="hero-tag"><i class="fa-solid fa-check-circle"></i> छात्र फॉर्म: मात्र ₹20</span>
+                    <span class="hero-tag"><i class="fa-solid fa-hand-holding-heart"></i> घर पर पेंशन: ₹50</span>
+                    <span class="hero-tag"><i class="fa-solid fa-shield-halved"></i> 100% सही प्रीव्यू गारंटी</span>
                 </div>
+                <h2>नंदगांव, बरसाना व आसपास के गांवों का <span>ऑनलाइन जन सेवा केंद्र</span></h2>
+                <p class="subheading">गिडोह, बदनगढ़, लोहरवारी, जाव, संकेत, महराना के छात्रों के लिए सभी सरकारी भर्ती फॉर्म मात्र ₹20 में। बुजुर्ग माताओं व वृद्ध पुरुषों हेतु घर बैठे पेंशन ई-केवाईसी सेवा उपलब्ध है।</p>
                 <div class="hero-btns">
-                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सहायता%20चाहिए।" target="_blank" class="btn-saffron"><i class="fa-brands fa-whatsapp"></i> WhatsApp से संपर्क करें</a>
-                    <a href="#services" class="btn-outline"><i class="fa-solid fa-circle-info"></i> सेवाएँ देखें</a>
+                    <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सरकारी%20नौकरी%20का%20फॉर्म%20भरवाना%20है।" target="_blank" class="btn-saffron">
+                        <i class="fa-brands fa-whatsapp"></i> फॉर्म भरवाएं (₹20)
+                    </a>
+                    <a href="#services" class="btn-outline">
+                        <i class="fa-solid fa-list-check"></i> उपलब्ध सेवाएं देखें
+                    </a>
                 </div>
             </div>
+
             <div class="quick-seva-card">
-                <h3><i class="fa-solid fa-bolt"></i> त्वरित सेवा</h3>
-                <p class="card-note">Choose your need and get guided support quickly.</p>
+                <h3><i class="fa-solid fa-headset" style="color: var(--saffron);"></i> त्वरित सेवा अनुरोध</h3>
+                <p class="card-note">विवरण दर्ज करें, रसीद व संपर्क तुरंत आपके व्हाट्सएप पर होगा।</p>
                 <div class="form-mini-group">
-                    <label>सेवा का प्रकार</label>
-                    <select>
-                        <option>सार्वजनिक फॉर्म</option>
-                        <option>बैंकिंग सहायता</option>
-                        <option>पेंशन / KYC</option>
-                        <option>रोज़गार / भर्ती</option>
-                        <option>व्यापार सहायता</option>
+                    <label>आवेदक का नाम व गाँव *</label>
+                    <input type="text" id="quick_name" placeholder="उदा: राहुल, नंदगांव" required>
+                </div>
+                <div class="form-mini-group">
+                    <label>व्हाट्सएप मोबाइल नंबर *</label>
+                    <input type="tel" id="quick_phone" placeholder="10 अंकों का फोन नंबर" required>
+                </div>
+                <div class="form-mini-group">
+                    <label>वांछित सेवा *</label>
+                    <select id="quick_service">
+                        <option value="सरकारी भर्ती फॉर्म (₹20)">सरकारी भर्ती आवेदन (मात्र ₹20)</option>
+                        <option value="बुजुर्ग पेंशन घर-बैठे सेवा (₹50)">बुजुर्ग पेंशन ई-केवाईसी (घर पर सेवा ₹50)</option>
+                        <option value="EPFO / PF फंड निकासी">EPFO / PF फंड निकासी व e-KYC</option>
+                        <option value="आय / जाति / निवास प्रमाण">आय / जाति / निवास प्रमाण पत्र</option>
                     </select>
                 </div>
-                <div class="form-mini-group">
-                    <label>नाम</label>
-                    <input type="text" placeholder="अपना नाम लिखें">
-                </div>
-                <div class="form-mini-group">
-                    <label>मोबाइल</label>
-                    <input type="tel" placeholder="मोबाइल नंबर">
-                </div>
-                <button class="btn-submit-quick"><i class="fa-brands fa-whatsapp"></i> WhatsApp पर भेजें</button>
+                <button class="btn-submit-quick" onclick="handleQuickSubmit()"><i class="fa-brands fa-whatsapp"></i> व्हाट्सएप पर भेजें</button>
             </div>
         </div>
     </section>
 
     <div class="transparency-section">
         <div class="price-compare-card">
-            <div class="compare-header"><i class="fa-solid fa-tags"></i> पारदर्शिता: हमारे शुल्क vs बाजार दर</div>
-            <div class="compare-grid">
-                <div class="service-title-col">स्टूडेंट सरकारी जॉब रिक्रूटमेंट फॉर्म</div>
-                <div class="market-rate-col">बाजार: ₹70–₹100</div>
-                <div class="enandgaon-rate-col">हमारा चार्ज: मात्र ₹20</div>
+            <div class="compare-header"><i class="fa-solid fa-scale-balanced" style="color: var(--saffron);"></i> जनहित पारदर्शिता तालिका (खर्च की खुली तुलना)</div>
+            <div class="compare-grid" style="background: #f8fafc; font-weight: bold; color: var(--gov-blue);">
+                <div>सेवा का प्रकार</div>
+                <div>अन्य साइबर कैफे / बाजार</div>
+                <div>ई-नंदगांव जन सेवा केंद्र</div>
             </div>
             <div class="compare-grid">
-                <div class="service-title-col">विधवा / वृद्धावस्था पेंशन डोरस्टेप KYC</div>
-                <div class="market-rate-col">बाजार: ₹100–₹200</div>
-                <div class="enandgaon-rate-col">विजिट चार्ज: मात्र ₹50 (फॉर्म निःशुल्क)</div>
+                <div class="service-title-col">सरकारी भर्ती आवेदन (SSC, Police, Railway)</div>
+                <div class="market-rate-col">पोर्टल फीस + ₹70–₹100</div>
+                <div class="enandgaon-rate-col">पोर्टल फीस + मात्र ₹20 (80% बचत)</div>
             </div>
             <div class="compare-grid">
-                <div class="service-title-col">Aadhaar / PAN / Bank KYC</div>
-                <div class="market-rate-col">बाजार: ₹80–₹150</div>
-                <div class="enandgaon-rate-col">हमारा चार्ज: मात्र ₹30</div>
+                <div class="service-title-col">बुजुर्ग पेंशन सत्यापन (घर आकर ई-केवाईसी)</div>
+                <div class="market-rate-col">ब्लॉक/तहसील जाने का कष्ट व खर्च</div>
+                <div class="enandgaon-rate-col">घर बैठे सेवा (फॉर्म मुफ़्त + ₹50 विजिट शुल्क)</div>
+            </div>
+            <div class="compare-grid">
+                <div class="service-title-col">EPFO / PF फंड निकासी (Form 31/19/10C)</div>
+                <div class="market-rate-col">₹300 से ₹500</div>
+                <div class="enandgaon-rate-col">मात्र ₹150 (50% से अधिक बचत)</div>
             </div>
         </div>
     </div>
 
     <section class="container" id="services">
         <div class="section-heading-center">
-            <span class="section-badge">मुख्य सेवाएं</span>
-            <h2>लोकल जरूरतों के लिए भरोसेमंद समाधान</h2>
-        </div>
-
-        <div class="service-tabs">
-            <button class="tab-btn active">सभी सेवाएँ</button>
-            <button class="tab-btn">नागरिक</button>
-            <button class="tab-btn">बैंकिंग</button>
-            <button class="tab-btn">व्यापार</button>
+            <span class="section-badge">डिजिटल नागरिक सेवा सूची</span>
+            <h2>ई-नंदगांव संपूर्ण सेवा केंद्र</h2>
         </div>
 
         <div class="services-list-grid" id="live-services-grid">
             <div class="srv-card">
-                <div class="srv-icon"><i class="fa-solid fa-file-lines"></i></div>
-                <div class="srv-badge badge-discount">सस्ते</div>
-                <h3>राजस्व / पेंशन / आवेदन फॉर्म</h3>
-                <p>सरकारी दस्तावेज़, फॉर्म भरण, और आवेदन सहेजने की सहायता। बिना भ्रम और बिना झंझट के सरल प्रक्रिया।</p>
+                <div class="srv-badge badge-free">सिर्फ़ ₹20</div>
+                <div class="srv-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>सरकारी भर्ती फॉर्म (UP Police, SSC, Rly)</h3>
+                <p>ऑनलाइन आवेदन, फोटो रिसाइज़िंग व 100% सही प्रीव्यू जांच। रसीद सीधे व्हाट्सएप पर।</p>
                 <div class="srv-pricing">
                     <span class="mkt-rate">बाजार: ₹70–₹100</span>
-                    <span class="our-rate">हमारा चार्ज: ₹20 मात्र</span>
+                    <span class="our-rate">हमारा चार्ज: मात्र ₹20</span>
                 </div>
-                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सरकारी%20फॉर्म%20सहायता%20चाहिए।" class="srv-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> सहायता लें</a>
+                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20सरकारी%20नौकरी%20का%20फॉर्म%20भरवाना%20है।" class="srv-btn btn-green" target="_blank"><i class="fa-brands fa-whatsapp"></i> फॉर्म भरवाएं (₹20)</a>
             </div>
 
             <div class="srv-card">
-                <div class="srv-icon"><i class="fa-solid fa-building-columns"></i></div>
-                <div class="srv-badge badge-free">फॉर्म फ्री</div>
-                <h3>विधवा / वृद्धावस्था पेंशन KYC</h3>
-                <p>घर बैठे KYC, योजना पंजीकरण और दस्तावेज़ जांच। गाँव की बुजुर्ग महिलाओं और परिवारों के लिए समर्पित सेवा।</p>
+                <div class="srv-badge badge-home">घर पर सेवा</div>
+                <div class="srv-icon"><i class="fa-solid fa-person-dress"></i></div>
+                <h3>निराश्रित / वृद्धा / दिव्यांग पेंशन KYC</h3>
+                <p>बुजुर्ग माताओं व वृद्ध पुरुषों के लिए घर आकर बायोमेट्रिक/ओटीपी सत्यापन सेवा।</p>
                 <div class="srv-pricing">
-                    <span class="mkt-rate">बाजार: ₹100–₹200</span>
+                    <span class="mkt-rate">बाजार: ब्लॉक के चक्कर</span>
                     <span class="our-rate">विजिट चार्ज: ₹50 मात्र</span>
                 </div>
-                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20पेंशन%20KYC%20सहायता%20चाहिए।" class="srv-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> सहायता लें</a>
+                <a href="https://wa.me/917988807962?text=प्रणाम%20विष्णु%20जी,%20मुझे%20घर%20पर%20पेंशन/ई-केवाईसी%20हेतु%20बुलाना%20है।" class="srv-btn btn-saffron" target="_blank"><i class="fa-solid fa-house-chimney-user"></i> घर पर बुलाएं</a>
             </div>
 
             <div class="srv-card">
-                <div class="srv-icon"><i class="fa-solid fa-wallet"></i></div>
-                <div class="srv-badge badge-home">घर बैठे</div>
-                <h3>बैंकिंग सहायता</h3>
-                <p>खाता खोलने, लोन, KCC, सिबिल स्कोर, DBT/आधार सीडिंग और डिजिटल बैंकिंग की सही साफ़-सुथरी जानकारी।</p>
+                <div class="srv-badge badge-discount">बैंकिंग</div>
+                <div class="srv-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <h3>बैंकिंग एवं वित्तीय सहायता</h3>
+                <p>ज़ीरो बैलेंस डिजिटल खाता, KCC/मुद्रा लोन फाइल तैयारी, CIBIL स्कोर व DBT सीडिंग।</p>
                 <div class="srv-pricing">
-                    <span class="mkt-rate">बाजार: ₹50–₹300</span>
+                    <span class="mkt-rate">बाजार: ₹100–₹500</span>
                     <span class="our-rate">हमारा चार्ज: ₹20–₹100</span>
                 </div>
-                <a href="banking.html" class="srv-btn btn-green"><i class="fa-solid fa-arrow-right"></i> बैंकिंग पेज खोलें</a>
+                <a href="banking.html" class="srv-btn"><i class="fa-solid fa-arrow-right"></i> बैंकिंग डेस्क खोलें</a>
             </div>
 
             <div class="srv-card">
+                <div class="srv-badge badge-discount">व्यापार</div>
                 <div class="srv-icon"><i class="fa-solid fa-store"></i></div>
-                <div class="srv-badge badge-discount">व्यवसाय</div>
-                <h3>व्यापार / डिजिटल ग्रोथ</h3>
-                <p>दुकान सूचीकरण, गूगल मैप्स, MSME, QR कोड, बिलिंग, वेबसाइट और डिजिटल मार्केटिंग सहायता।</p>
+                <h3>व्यापार & डिजिटल ग्रोथ डेस्क</h3>
+                <p>दुकान की गूगल मैप्स लिस्टिंग, MSME उद्यम रजिस्ट्रेशन, व्यावसायिक वेबसाइट एवं ऐप।</p>
                 <div class="srv-pricing">
-                    <span class="mkt-rate">बाजार: ₹150–₹500</span>
+                    <span class="mkt-rate">बाजार: ₹300–₹500</span>
                     <span class="our-rate">हमारा चार्ज: ₹50–₹150</span>
                 </div>
-                <a href="business.html" class="srv-btn btn-saffron"><i class="fa-solid fa-arrow-right"></i> व्यापार पेज खोलें</a>
+                <a href="business.html" class="srv-btn btn-green"><i class="fa-solid fa-arrow-right"></i> व्यापार डेस्क खोलें</a>
             </div>
         </div>
     </section>
@@ -950,51 +812,47 @@
                     <i class="fa-solid fa-user-check"></i>
                 </div>
                 <h3 style="color: var(--gov-blue); font-weight: 800; margin-top: 8px;">विष्णु कुमार</h3>
-                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 4px;">संस्थापक & परिचालक</p>
-                <p style="font-size: 0.8rem; color: #94a3b8; font-weight: 600;">नंदगांव जन सेवा केंद्र</p>
+                <p style="font-size: 0.88rem; color: #64748b;">संचालक एवं तकनीकी सेवक</p>
+                <p style="font-size: 0.8rem; color: var(--green); font-weight: 700; margin-top: 4px;"><i class="fa-solid fa-check-double"></i> सत्यापित संचालक</p>
             </div>
             <div>
-                <h2 style="color: var(--gov-blue); font-size: 1.6rem; margin-bottom: 14px;">विष्णु कुमार के बारे में</h2>
-                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 14px; line-height: 1.8;">
-                    विष्णु कुमार ई-नंदगांव जन सेवा केंद्र के संस्थापक हैं, और उनका उद्देश्य ग्रामीण परिवारों को सरकारी प्रक्रियाओं, डिजिटल सहायता, और सही जानकारी के साथ जोड़ना है।
+                <h2 style="color: var(--gov-blue); font-size: 1.5rem; margin-bottom: 10px;">हमारा संकल्प: "पारदर्शिता, सेवा और तकनीक"</h2>
+                <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 12px;">
+                    मेरा उद्देश्य नंदगांव, बरसाना, गिडोह, बदनगढ़, लोहरवारी, जाव, संकेत और महराना के हर नागरिक, छात्र और बुजुर्ग को डिजिटल दुनिया से जोड़ना है ताकि किसी को भी बुनियादी सेवाओं के लिए अधिक पैसे न देने पड़ें।
                 </p>
-                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 14px; line-height: 1.8;">
-                    उनके द्वारा संचालित सेवा मॉडल में पारदर्शिता, भरोसा और समझदारी को प्राथमिकता दी जाती है, ताकि लोग देरी, दलालों और गलतफहमी से बच सकें।
-                </p>
-                <div style="display: flex; gap: 12px; margin-top: 18px;">
-                    <a href="https://wa.me/917988807962" target="_blank" style="background: var(--wa-green); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
-                        <i class="fa-brands fa-whatsapp"></i> संपर्क करें
-                    </a>
-                </div>
+                <ul style="list-style: none; font-size: 0.9rem; color: #334155;">
+                    <li style="padding: 4px 0;"><i class="fa-solid fa-circle-check" style="color: var(--green); margin-right: 6px;"></i> छात्र सरकारी भर्ती फॉर्म मात्र ₹20 सेवा शुल्क में।</li>
+                    <li style="padding: 4px 0;"><i class="fa-solid fa-circle-check" style="color: var(--green); margin-right: 6px;"></i> बुजुर्गों हेतु घर पर पेंशन ई-केवाईसी (विजिट शुल्क मात्र ₹50)।</li>
+                    <li style="padding: 4px 0;"><i class="fa-solid fa-circle-check" style="color: var(--green); margin-right: 6px;"></i> 100% पारदर्शी और सुरक्षित व्यवस्था।</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <footer class="portal-footer" style="margin-top: 60px;">
+    <footer class="portal-footer">
         <div class="footer-cols">
             <div class="footer-col">
                 <h4>ई-नंदगांव जन सेवा केंद्र</h4>
-                <p style="font-size: 0.9rem; margin-bottom: 12px;">नंदगांव, बरसाना, गिडोह, बदनगढ़, संकेत, जाव, महराना, छाता (मथुरा) के लिए ग्रामीण सेवा और डिजिटल सहायता।</p>
-                <p style="font-size: 0.85rem;"><strong>हेल्पलाइन:</strong> +91 7988807962</p>
+                <p style="font-size: 0.88rem; line-height: 1.7;">नंदगांव, बरसाना, गिडोह, बदनगढ़, संकेत, जाव एवं छाता क्षेत्र के नागरिकों, विद्यार्थियों एवं व्यापारियों के लिए समर्पित सेवा केंद्र।</p>
             </div>
             <div class="footer-col">
-                <h4>त्वरित लिंक</h4>
+                <h4>समर्पित पेज</h4>
                 <ul>
-                    <li><a href="index.html">होम</a></li>
-                    <li><a href="banking.html">बैंकिंग</a></li>
-                    <li><a href="business.html">व्यापार</a></li>
+                    <li><a href="index.html">• नागरिक सेवाएं (₹20)</a></li>
+                    <li><a href="banking.html">• बैंकिंग व लोन सहायता</a></li>
+                    <li><a href="business.html">• व्यापार व IT सेवाएं</a></li>
+                    <li><a href="https://chat.whatsapp.com/KcJkcWggfkF2aQM4Dce6CG" target="_blank">• जॉब अलर्ट व्हाट्सएप ग्रुप</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>हमें फॉलो करें</h4>
-                <ul>
-                    <li><a href="https://wa.me/917988807962" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
-                    <li><a href="https://chat.whatsapp.com/KcJkcWggfkF2aQM4Dce6CG" target="_blank"><i class="fa-brands fa-whatsapp"></i> जॉब अलर्ट</a></li>
-                </ul>
+                <h4>सम्पर्क सूत्र</h4>
+                <p style="font-size: 0.88rem;"><strong>संचालक:</strong> विष्णु कुमार</p>
+                <p style="font-size: 0.88rem;"><strong>WhatsApp / फोन:</strong> +91 7988807962</p>
+                <p style="font-size: 0.88rem;"><strong>स्थान:</strong> नंदगांव, जनपद-मथुरा (उ.प्र.)</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ई-नंदगांव जन सेवा केंद्र | सर्वाधिकार सुरक्षित</p>
+            <p>&copy; 2026 ई-नंदगांव जन सेवा केंद्र (enandgaon.com) | सर्वाधिकार सुरक्षित</p>
         </div>
     </footer>
 
@@ -1016,39 +874,37 @@
                     if (grid) {
                         grid.innerHTML = data.services.map(service => `
                             <div class="srv-card">
-                                <div class="srv-icon"><i class="${service.icon || 'fa-solid fa-file-lines'}"></i></div>
-                                <div class="srv-badge ${service.badge_class || 'badge-discount'}">${service.badge || 'सेवा'}</div>
+                                <div class="srv-badge ${service.badge_type === 'free' ? 'badge-free' : (service.badge_type === 'home' ? 'badge-home' : 'badge-discount')}">${service.badge || 'सत्यापित'}</div>
+                                <div class="srv-icon"><i class="${service.icon || 'fa-solid fa-star'}"></i></div>
                                 <h3>${service.service_title_hi || service.title || 'सेवा'}</h3>
                                 <p>${service.description || ''}</p>
                                 <div class="srv-pricing">
                                     <span class="mkt-rate">बाजार: ₹${service.market_rate || 100}</span>
                                     <span class="our-rate">हमारा चार्ज: ₹${service.our_rate || 20} मात्र</span>
                                 </div>
-                                <a href="${service.wa_url || 'https://wa.me/917988807962'}" class="srv-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> सहायता लें</a>
+                                <a href="https://wa.me/917988807962?text=${encodeURIComponent(service.wa_text || 'नमस्ते विष्णु जी, मुझे सहायता चाहिए।')}" class="srv-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> संपर्क करें</a>
                             </div>
                         `).join('');
                     }
                 }
             } catch (error) {
-                console.warn('Sheet data unavailable, using local static content.', error);
+                console.warn('Sheet data unavailable, using fallback cards.', error);
             }
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            fetchLiveSheetData();
-
-            const quickBtn = document.querySelector('.btn-submit-quick');
-            if (quickBtn) {
-                quickBtn.addEventListener('click', function () {
-                    const name = document.querySelector('.form-mini-group input[type="text"]').value.trim();
-                    const phone = document.querySelector('.form-mini-group input[type="tel"]').value.trim();
-                    const selection = document.querySelector('.form-mini-group select').value;
-                    const message = encodeURIComponent(`नमस्ते विष्णु जी, मुझे ${selection} के लिए सहायता चाहिए।\nनाम: ${name}\nमोबाइल: ${phone}`);
-                    window.open(`https://wa.me/917988807962?text=${message}`, '_blank');
-                });
+        function handleQuickSubmit() {
+            const name = document.getElementById('quick_name').value.trim();
+            const phone = document.getElementById('quick_phone').value.trim();
+            const service = document.getElementById('quick_service').value;
+            if(!name || !phone) {
+                alert("कृपया अपना नाम और मोबाइल नंबर दर्ज करें।");
+                return;
             }
-        });
+            const msg = `*ई-नंदगांव सेवा अनुरोध*%0A%0A*नाम:* ${encodeURIComponent(name)}%0A*मोबाइल:* ${encodeURIComponent(phone)}%0A*वांछित सेवा:* ${encodeURIComponent(service)}`;
+            window.open(`https://wa.me/917988807962?text=${msg}`, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchLiveSheetData);
     </script>
 </body>
 </html>
-
