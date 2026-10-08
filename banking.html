@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XE3MJWSPQT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XE3MJWSPQT');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>बैंकिंग एवं वित्तीय सहायता डेस्क | ई-नंदगांव जन सेवा केंद्र</title>
-    <meta name="description" content="बैंकिंग एवं वित्तीय सहायता: डिजिटल बैंक खाता, KCC/मुद्रा लोन, CIBIL, Aadhaar DBT जैसी सेवाएँ।">
+    <meta name="description" content="डिजिटल बैंक खाता, KCC/मुद्रा लोन फाइल तैयारी, सिबिल स्कोर और सरकारी सब्सिडी (DBT) स्टेटस जांच।">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,27 +76,16 @@
         .operator-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #eff6ff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .operator-img-fallback { width: 140px; height: 140px; border-radius: 50%; background: var(--gov-blue); color: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
 
-        .op-avatar-img {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #eff6ff;
-            margin: 0 auto 10px;
-            display: block;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
         footer.portal-footer { background: var(--gov-dark); color: #94a3b8; padding: 35px 5% 20px; margin-top: 60px; text-align: center; font-size: 0.85rem; }
 
         @media (max-width: 900px) {
             .portal-topbar { padding: 4px 12px; font-size: 0.72rem; }
-            header.main-header { padding: 6px 12px; flex-direction: row wrap; gap: 6px; }
-            .site-logo, .brand-emblem-badge { height: 34px; }
+            header.main-header { padding: 6px 12px; flex-direction: row; flex-wrap: wrap; gap: 6px; }
+            .site-logo { height: 34px; }
             .brand-text h1 { font-size: 1.05rem; }
             .brand-text p { display: none; }
-            .btn-grp, .btn-call { padding: 5px 10px; font-size: 0.75rem; }
             .nav-links { width: 100%; display: flex; justify-content: space-around; padding-top: 4px; margin-top: 2px; border-top: 1px solid #f1f5f9; }
+            .nav-links a { padding: 4px 8px; font-size: 0.78rem; }
             .page-hero { padding: 24px 12px; }
             .page-hero h2 { font-size: 1.5rem; }
             .profile-card { grid-template-columns: 1fr; text-align: center; }
@@ -98,27 +96,25 @@
     <div class="tricolor-strip"></div>
     <div class="sticky-nav-wrapper">
         <div class="portal-topbar">
-            <div>📍 से��ा क्षेत्र: नंदगांव, बरसाना, छाता, कोसी कलां एवं ग्रामीण क्षेत्र</div>
+            <div>📍 सेवा क्षेत्र: नंदगांव, बरसाना, छाता, कोसी कलां एवं ग्रामीण क्षेत्र</div>
             <div>हेल्पलाइन: <a href="tel:917988807962">+91 7988807962</a></div>
         </div>
         <header class="main-header">
             <a href="index.html" class="brand">
-                <img src="logo.png" alt="eNandgaon Logo" class="site-logo" onerror="this.style.display='none'; document.getElementById('logo-fallback-badge').style.display='flex';">
-                <div id="logo-fallback-badge" class="brand-emblem-badge" style="display: none;">
-                    <i class="fa-solid fa-landmark"></i>
-                </div>
+                <img src="logo.png" alt="eNandgaon Logo" class="site-logo" onerror="this.src='https://via.placeholder.com/48?text=CSC'">
                 <div class="brand-text">
                     <h1>ई-नंदगांव जन सेवा केंद्र</h1>
                     <p>बैंकिंग एवं वित्तीय सुविधा सहायता डेस्क</p>
                 </div>
             </a>
+            <!-- No admin button -->
             <nav class="nav-links">
                 <a href="index.html">नागरिक सेवाएं</a>
                 <a href="banking.html" class="active">बैंकिंग सहायता</a>
                 <a href="business.html">व्यापार सेवाएं</a>
             </nav>
             <div class="header-cta">
-                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20बैंकिंग%20सेवा%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank">
+                <a href="https://wa.me/917988807962?text=नमस्ते%20विष्णु%20जी,%20मुझे%20बैंकिंग%20सेवा%20हेतु%20जानकारी%20चाहिए।" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i> बैंक डेस्क सहायता
                 </a>
             </div>
@@ -126,8 +122,8 @@
     </div>
 
     <section class="page-hero">
-        <h2>बैंक के काग़ज़ी झंझटों से मुक्ति, <span>सच्चे मार्गदर्शन के साथ</span></h2>
-        <p>गाँव के किसानों, छात्रों और परिवारों के लिए खाता खोलना, लोन फाइल तैयार करना, सीबिल स्कोर चेक करना और आधार-किसान-कर्मचारी सेवा की सही जानकारी।</p>
+        <h2>बैंक के कागज़ी झंझटों से मुक्ति, <span>सच्चे मार्गदर्शन के साथ</span></h2>
+        <p>गाँव के किसानों, छात्रों और परिवारों के लिए खाता खोलना, लोन फाइल तैयारी, सिबिल स्कोर और सरकारी सब्सिडी (DBT) स्टेटस की निष्पक्ष जांच।</p>
     </section>
 
     <div class="container">
@@ -151,7 +147,7 @@
             <div class="srv-card">
                 <div class="srv-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
                 <h3>मुद्रा / KCC लोन फाइल तैयारी</h3>
-                <p>बैंक में जमा करने हेतु लोन आवेदन पत्र, आवश्यक संलग्नक, प्रोजेक्ट रिपोर्ट और दस्तावेज़ तैयारी।</p>
+                <p>बैंक में जमा करने हेतु लोन आवेदन पत्र, आवश्यक संलग्नक, प्रोजेक्ट समरी व दस्तावेज़ों की सही जांच।</p>
                 <div class="srv-pricing">
                     <span style="text-decoration: line-through; color: #dc2626;">बाजार: ₹300-₹500</span>
                     <span style="color: var(--green); font-weight: 800;">हमारा चार्ज: ₹100 मात्र</span>
@@ -162,7 +158,7 @@
             <div class="srv-card">
                 <div class="srv-icon"><i class="fa-solid fa-chart-line"></i></div>
                 <h3>सिबिल स्कोर (CIBIL) व क्रेडिट रिपोर्ट</h3>
-                <p>लोन या क्रेडिट कार्ड मिलने में परेशानी? आधिकारिक पोर्टल से सीबिल रिपोर्ट और सुधारात्मक सलाह।</p>
+                <p>लोन या क्रेडिट कार्ड मिलने में परेशानी? आधिकारिक पोर्टल से सिबिल रिपोर्ट और सुधार सलाह।</p>
                 <div class="srv-pricing">
                     <span style="text-decoration: line-through; color: #dc2626;">बाजार: ₹100</span>
                     <span style="color: var(--green); font-weight: 800;">हमारा चार्ज: ₹30 मात्र</span>
@@ -173,7 +169,7 @@
             <div class="srv-card">
                 <div class="srv-icon"><i class="fa-solid fa-fingerprint"></i></div>
                 <h3>NPCI / Aadhaar DBT सीडिंग जांच</h3>
-                <p>क्या आपकी पीएम किसान सम्मान निधि, पेंशन या छात्रवृत्ति बैंक खाते में सही जुड़ी है? जांच और सुधार।</p>
+                <p>पीएम किसान सम्मान निधि, पेंशन या छात्रवृत्ति बैंक खाते में नहीं आ रही? तुरंत डीबीटी मैपिंग जांच कराएं।</p>
                 <div class="srv-pricing">
                     <span style="text-decoration: line-through; color: #dc2626;">बाजार: ₹50</span>
                     <span style="color: var(--green); font-weight: 800;">हमारा चार्ज: ₹20 मात्र</span>
@@ -194,14 +190,14 @@
                 <h3 style="font-size: 1.4rem; color: var(--gov-blue); font-weight: 800; margin-top: 6px;">विष्णु कुमार</h3>
                 <p style="font-size: 0.85rem; color: #64748b; font-weight: 600; margin-bottom: 10px;">डिजिटल वित्तीय मार्गदर्शक एवं संचालक</p>
                 <p style="font-size: 0.92rem; color: var(--text-gray); line-height: 1.6;">
-                    "गाँव के लोगों को बैंकिंग प्रक्रियाओं में अक्सर दलालों के चक्कर का सामना करना पड़ता है। मैं सरल, सही और पारदर्शी मार्गदर्शन देता हूँ ताकि कोई भी व्यक्ति भरोसे से अपने बैंकिंग काम कर सके।"
+                    "गाँव के लोगों को बैंकिंग प्रक्रियाओं में अक्सर दलालों के चक्कर काटने पड़ते हैं। मेरा उद्देश्य आपको सीधी, पारदर्शी और सटीक कागज़ी सहायता उपलब्ध कराना है ताकि आपका कोई भी फॉर्म या लोन फाइल कभी बिना वजह निरस्त न हो।"
                 </p>
             </div>
         </div>
     </div>
 
     <footer class="portal-footer">
-        <p>&copy; 2026 ई-नंदगांव जन सेवा केंद्र | बैंकिंग व वित्तीय डेस्क | संचालक: विष्णु कुमार</p>
+        <p>&copy; 2026 ई-नंदगांव जन सेवा केंद्र | बैंकिंग व वित्तीय डेस्क | संचालक: विष्णु कुमार (+91 7988807962)</p>
     </footer>
 
     <script>
@@ -224,7 +220,7 @@
                                     <span style="text-decoration: line-through; color: #dc2626;">बाजार: ₹${item.market_rate || '100'}</span>
                                     <span style="color: var(--green); font-weight: 800;">हमारा चार्ज: ₹${item.our_rate || '50'} मात्र</span>
                                 </div>
-                                <a href="${item.wa_url || 'https://wa.me/917988807962'}" class="srv-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> सहायता लें</a>
+                                <a href="https://wa.me/917988807962?text=${encodeURIComponent(item.wa_text || 'नमस्ते, मुझे इस सेवा की जानकारी चाहिए')}" class="srv-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> सहायता लें</a>
                             </div>
                         `;
                     });
@@ -233,9 +229,7 @@
                 console.warn('Using offline banking cards fallback', e);
             }
         }
-
         window.addEventListener('load', fetchBankingServices);
     </script>
 </body>
 </html>
-
